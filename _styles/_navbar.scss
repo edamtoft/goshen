@@ -1,26 +1,30 @@
 .gsr-navbar {
-    .luxuryNav {
+    position: relative; 
+    height: 60px; 
+    margin-top: 75px; 
+    background: linear-gradient(to right, #16213E, #8597C5);
+    #gsr-nav {
         list-style: none;
         text-align: center;
         margin: 0;
-    }
-    .luxuryNav li {
-        display: inline-block;
-        line-height: 60px;
-        vertical-align: middle;
-    }
-    .luxuryNav a {
-        font-family: 'Palanquin',sans-serif;
-        font-size: 1.5em;
-        color: #fff;
-        padding: 0 10px;
-        margin: 0 10px;
-        transition: all 0.3s ease-in-out;
-    }
-    .luxuryNav a:hover, .luxuryNav a:active, .luxuryNav a:focus {
-        text-decoration: none;
-        color: #9298A7;
-        transition: all 0.3s ease-out-in;
+        li {
+            display: inline-block;
+            line-height: 60px;
+            vertical-align: middle;
+        }
+        a {
+            font-family: 'Palanquin',sans-serif;
+            font-size: 1.5em;
+            color: #fff;
+            padding: 0 10px;
+            margin: 0 10px;
+            transition: all 0.3s ease-in-out;
+            &:active , &:hover, &:focus {
+                text-decoration: none;
+                color: #9298A7;
+                transition: all 0.3s ease-out-in;
+            }
+        }
     }
     .dropdown .dropdown-menu {
         transition: all 0.3s;
@@ -40,24 +44,26 @@
     .dropdown-menu {
         background-color: #444D65;
         border-radius: none;
+        li {
+            line-height: 40px;
+            a {
+                color: #fff;
+                &:hover, &:focus {
+                    color: #9298A7;
+                    background-color: transparent;
+                }
+            }
+        }
     }
-    .dropdown-menu li {
-        line-height: 40px;
-    }
-    .dropdown-menu li a {
-        color: #fff;
-    }
-    .dropdown-menu li a:hover, dropdown-menu li a:focus {
-        color: #9298A7;
-        background-color: transparent;
-    }
+
     .multi-dropdown {
         width: 43%;
-    }
-    .multi-dropdown ul {
-        padding: 0;
-    }
-    .multi-dropdown ul li {
-        white-space: nowrap;
+        ul {
+            padding: 0;
+            li {
+                white-space: nowrap;
+            }
+        }
+
     }
 }

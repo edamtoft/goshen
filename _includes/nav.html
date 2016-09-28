@@ -1,14 +1,13 @@
-<nav class="row gsr-navbar" style="position: relative; height: 60px; margin-top: 75px; background: linear-gradient(to right, #16213E, #8597C5);">
-  <div class="" id="luxuryNav-collapse" style="display: block;">
-    <ul class="luxuryNav" style="margin-left: -2%;">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
+<nav class="row gsr-navbar">
+  <div id="gsr-nav-collapse" style="display: block;">
+    <ul id="gsr-nav" style="margin-left: -2%;">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about.html">About</a></li>
       <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Camps &amp; Programs <span class="caret"></span></a>
+        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Camps &amp; Programs <span class="caret"></span></a>
         <ul class="dropdown-menu" style="width: 350px;">
           <li class="multi-dropdown">
             <ul>
-              <li><a href="/camps/marriott.html">Camp Marriott</a></li>
               {% for camp in site.camps %}
               <li><a href="{{camp.url}}">{{camp.title}}</a></li>
               {% endfor %}
@@ -16,33 +15,29 @@
           </li>
           <li class="multi-dropdown">
             <ul>
-              <li><a href="#">High Adventure</a></li>
-              <li><a href="#">LDS Week</a></li>
-              <li><a href="#">Provisional Camp</a></li>
-              <li><a href="#">Specialty Week</a></li>
-              <li><a href="#">Venturing Camp</a></li>
-              <li><a href="#">Gray's Lodge</a></li>
+              {% for program in site.programs %}
+              <li><a href="{{program.url}}">{{program.title}}</a></li>
+              {% endfor %}
             </ul>
           </li>
         </ul>
       </li>
       <li style="width: 10%;"></li>
-      <li><a href="#">Registration</a></li>
+      <li><a href="/registration.html">Registration</a></li>
       <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Information <span class="caret"></span></a>
+        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Information <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Downloads</a></li>
-          <li><a href="#">Transportation</a></li>
-          <li><a href="#">Facilities Use</a></li>
-          <li><a href="#">Staff</a></li>
-          <li><a href="#">Contact</a></li>
+          {% for item in site.information %}
+          <li><a href="{{item.url}}">{{item.title}}</a></li>
+          {% endfor %}
         </ul>
       </li>
       <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Events <span class="caret"></span></a>
+        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Events <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Family Camp</a></li>
-          <li><a href="#">Goshen@50</a></li>
+          {% for events in site.events %}
+          <li><a href="{{events.url}}">{{events.title}}</a></li>
+          {% endfor %}
         </ul>
       </li>
     </ul>

@@ -4,3 +4,9 @@ exclude: ["node_modules", "_styles", "gulpfile.js", "package.json",".vscode"]
 collections:
   camps:
     output: true
+  programs:
+    output: true
+  information:
+    output: true
+  events:
+    output: true
