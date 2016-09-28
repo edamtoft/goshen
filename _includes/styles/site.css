@@ -1,8 +1,8 @@
 .gsr-navbar {
   position: relative;
   height: 60px;
-  margin-top: 75px;
-  background: linear-gradient(to right, #16213E, #8597C5); }
+  margin-top: 40px;
+  background: linear-gradient(to right, #16213E, #3e5daf); }
   .gsr-navbar #gsr-nav {
     list-style: none;
     text-align: center;
@@ -12,6 +12,8 @@
       line-height: 60px;
       vertical-align: middle; }
     .gsr-navbar #gsr-nav a {
+      display: block;
+      height: 100%;
       font-family: 'Palanquin',sans-serif;
       font-size: 1.5em;
       color: #fff;
@@ -20,8 +22,13 @@
       transition: all 0.3s ease-in-out; }
       .gsr-navbar #gsr-nav a:active, .gsr-navbar #gsr-nav a:hover, .gsr-navbar #gsr-nav a:focus {
         text-decoration: none;
-        color: #9298A7;
+        color: #8197d2;
         transition: all 0.3s ease-out-in; }
+  .gsr-navbar .logo {
+    position: absolute;
+    left: 50%;
+    margin-left: -40px;
+    top: 0px; }
   .gsr-navbar .dropdown .dropdown-menu {
     transition: all 0.3s;
     max-height: 0;
@@ -31,18 +38,17 @@
   .gsr-navbar .dropdown.open .dropdown-menu {
     max-height: 300px;
     opacity: 1; }
-  .gsr-navbar .open .caret {
-    border-top-width: 0;
-    border-bottom: 4px solid #fff; }
   .gsr-navbar .dropdown-menu {
-    background-color: #444D65;
+    background-color: rgba(22, 33, 62, 0.8);
     border-radius: none; }
     .gsr-navbar .dropdown-menu li {
       line-height: 40px; }
       .gsr-navbar .dropdown-menu li a {
-        color: #fff; }
+        color: #fff;
+        display: block;
+        height: 100%; }
         .gsr-navbar .dropdown-menu li a:hover, .gsr-navbar .dropdown-menu li a:focus {
-          color: #9298A7;
+          color: #8197d2;
           background-color: transparent; }
   .gsr-navbar .multi-dropdown {
     width: 43%; }

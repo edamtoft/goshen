@@ -1,8 +1,8 @@
 .gsr-navbar {
     position: relative; 
     height: 60px; 
-    margin-top: 75px; 
-    background: linear-gradient(to right, #16213E, #8597C5);
+    margin-top: 40px; 
+    background: linear-gradient(to right, $navbar-background, lighten($navbar-background,30%));
     #gsr-nav {
         list-style: none;
         text-align: center;
@@ -13,18 +13,26 @@
             vertical-align: middle;
         }
         a {
+            display: block;
+            height: 100%;
             font-family: 'Palanquin',sans-serif;
             font-size: 1.5em;
-            color: #fff;
+            color: $navbar-color;
             padding: 0 10px;
             margin: 0 10px;
             transition: all 0.3s ease-in-out;
             &:active , &:hover, &:focus {
                 text-decoration: none;
-                color: #9298A7;
+                color: lighten($navbar-background,50%);
                 transition: all 0.3s ease-out-in;
             }
         }
+    }
+    .logo {
+        position: absolute;
+        left: 50%;
+        margin-left: -40px;
+        top: 0px;
     }
     .dropdown .dropdown-menu {
         transition: all 0.3s;
@@ -37,19 +45,21 @@
         max-height: 300px;
         opacity: 1;
     }
-    .open .caret {
-        border-top-width: 0;
-        border-bottom: 4px solid #fff;
-    }
+    // .open .caret {
+    //     border-top-width: 0;
+    //     border-bottom: 4px solid $navbar-color;
+    // }
     .dropdown-menu {
-        background-color: #444D65;
+        background-color: transparentize($navbar-background, 0.2);
         border-radius: none;
         li {
             line-height: 40px;
             a {
-                color: #fff;
+                color: $navbar-color;
+                display: block;
+                height: 100%;
                 &:hover, &:focus {
-                    color: #9298A7;
+                    color: lighten($navbar-background,50%);
                     background-color: transparent;
                 }
             }
@@ -64,6 +74,5 @@
                 white-space: nowrap;
             }
         }
-
     }
 }
