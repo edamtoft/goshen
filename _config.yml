@@ -1,0 +1,6 @@
+---
+title: Goshen Scout Reservation
+exclude: ["node_modules", "_styles", "gulpfile.js", "package.json",".vscode"]
+collections:
+  camps:
+    output: true
