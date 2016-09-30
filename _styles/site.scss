@@ -2,6 +2,13 @@ $navbar-background: #16213E;
 $navbar-color: #fff;
 @import "_navbar.scss";
 @import "_header.scss";
+@import "_homepage.scss";
+
+a.ghastly-button {display: inline-block; width: 100px; padding: 8px; margin-top: 20px; margin-bottom: 15px; color: #fff; border: 2px solid #fff; border-radius: 2px; outline: none; text-decoration: none; transition: background-color 0.2s ease-out, color 0.2s ease-out; background-color: transparent; z-index: 950; font-size: 1em; font-family: 'Palanquin', sans-serif; font-weight: 700;}
+a.ghastly-button:hover, a.haunter-button:active {background-color: #fff; color: #2F384C; transition: background-color 0.3s ease-in, color 0.3s ease-in;}
+
+a.haunter-button {display: inline-block; width: 200px; padding: 8px; margin-bottom: 15px; color: #fff; border: 2px solid #fff; border-radius: 2px; outline: none; text-decoration: none; transition: background-color 0.2s ease-out, color 0.2s ease-out; background-color: transparent; z-index: 950; font-size: 1.25em; font-family: 'Palanquin', sans-serif; font-weight: 700;}
+a.haunter-button:hover, a.haunter-button:active {background-color: #fff; color: #2F384C; transition: background-color 0.3s ease-in, color 0.3s ease-in;}
 
 h2 {font-family: 'Palanquin', sans-serif;}
 

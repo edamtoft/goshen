@@ -1,0 +1,15 @@
+#gsrTitle {font-size:64px; line-height: 70px; font-family: 'Palanquin Dark', sans-serif; text-transform: uppercase; color: #fff; text-align: center; margin: .95em 0 0;}
+#gsrSubtitle {font-family: 'Palanquin', sans-serif; font-size: 32px; text-align: center; color: #fff;}
+@media screen and (max-width: 991px) {
+    #gsrTitle {font-size: 34px; line-height: 40px; margin-top: .3em;}
+    #gsrSubtitle {font-size: 22px;}
+}
+
+@media screen and (min-width: 768px) {#frontRow {margin-top: -23%;}}
+.boxThing, .pictureThing {height: 250px; padding: 10px;}
+.boxThing .subThing {background-color: #444D65; color: #fff; padding: 3%; height: 100%; width: 100%;}
+.pictureThing .subThing {background-size: cover; background-position: center center; height: 100%; width: 100%;}
+@media screen and (max-width: 767px) {
+    .boxThing {height: 200px; padding: 0;}
+    .pictureThing {height: 150px; padding: 0;}
+}

@@ -1,10 +1,15 @@
 ---
 layout: base
 ---
-<header class="container-fluid">
+<header class="container-fluid" style="background-image: url('/assets/Hero_Home.png'); background-position: center top; background-size: cover; height: 100%; position: relative;">
   {% include nav.html %}
-  I'm a head!!
+  <h1 id="gsrTitle" style="margin-top: 10%;">Goshen Scout Reservation</h1>
+  <p id="gsrSubtitle">Bowman &nbsp;&nbsp;|&nbsp;&nbsp; Marriott &nbsp;&nbsp;| &nbsp;&nbsp;Olmsted &nbsp;&nbsp;| &nbsp;&nbsp;PMI &nbsp;&nbsp;| &nbsp;&nbsp;Ross &nbsp;&nbsp;|&nbsp;&nbsp; Lenhok'sin</p>
+  <p id="CTAbutton" style="text-align: center; margin-top: 5%;">
+    <a class="haunter-button" href="#">Begin Your Adventure</a>
+  </p>
+  <div class="row" style="position: absolute; bottom: 0; height: 15em; width: 100%; background: linear-gradient(rgba(58,90,91,0.3), rgba(58,90,91,1));"></div>
 </header>
-<main class="container">
+<main class="container-fluid">
   {{content}}
 </main>
