@@ -48,7 +48,7 @@ a.haunter-button:active {
     transition: background-color 0.3s ease-in, color 0.3s ease-in;
 }
 h2 {
-    font-family: 'Palanquin', sans-serif;
+    font-family: 'Palanquin', sans-serif !important;
 }
 //title underline series
 .gsrtitle::after {
