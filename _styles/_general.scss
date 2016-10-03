@@ -1,5 +1,17 @@
 html, body {height:100%;}
 
+main .row {padding-bottom: 3%;}
+
+h2 {
+    font-family: 'Palanquin Dark', sans-serif !important;
+}
+h3 {
+    font-family: 'Palanquin', sans-serif !important;
+}
+h4 {
+    font-family: 'Palanquin', sans-serif !important;
+}
+
 a.ghastly-button {
     display: inline-block;
     width: 100px;
@@ -47,9 +59,7 @@ a.haunter-button:active {
     color: #2F384C;
     transition: background-color 0.3s ease-in, color 0.3s ease-in;
 }
-h2 {
-    font-family: 'Palanquin', sans-serif !important;
-}
+
 //title underline series
 .gsrtitle::after {
     content: '';
@@ -84,9 +94,14 @@ h2 {
     display: block;
     margin: 20px auto;
 }
+
+.gsrAbout {
+    background-color: $primaryBGcolor;
+}
+
 .gsrContents {
     list-style: none;
-    border-left: 4px solid #6B482B;
+    border-left: 4px solid $tertiaryFontColor;
     margin: 10px 0 25px 0;
     padding-left: 10px;
 }
@@ -95,5 +110,24 @@ h2 {
 }
 .gsrContents a {
     font-size: 1.2em;
-    color: #fff;
+    color: #0e0e0e;
+    line-height: 48px;
+}
+
+.gsrPageAnnouncements {
+    margin-top: -5%;
+    padding: 2%;
+    padding-top: 0;
+    background-color: $tertiaryBGcolor;
+    color: $secondaryFontColor;
+}
+.AnnouncementsTitle {
+    border-bottom: 2px solid $tertiaryFontColor;
+}
+.announceDate {
+    color: $tertiaryFontColor;
+}
+.announceDescription {
+    border-bottom: 1px solid $secondaryFontColor;
+    padding-bottom: 15px;
 }
