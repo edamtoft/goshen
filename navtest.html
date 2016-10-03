@@ -1,0 +1,54 @@
+---
+---
+<style>
+.flex-navbar {
+  background: linear-gradient(to right, #16213E, #3e5daf);
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+.flex-navbar>section>a {
+  display: none;
+}
+.flex-navbar>section:hover>a {
+  display: block;
+}
+.flex-navbar>a, .flex-navbar>section>a:first-child {
+  display: block;
+  padding: 12px;
+  height: 24px;
+  line-height: 24px;
+  color: #fff;
+  text-decoration: none;
+}
+</style>
+<nav class="flex-navbar">
+  <a href="/">Home</a>
+  <a href="/about.html">About</a>
+  <section>
+    <a>Camps and Programs</a>
+    <a href="#">Camp Marriott</a>
+    <a href="#">Camp Olmsted</a>
+    <a href="#">Camp Olmsted</a>
+    <a href="#">Camp Olmsted</a>
+  </section>
+  <img src="/assets/logo.png">
+  <a href="/registration.html">Registration</a>
+  <section>
+    <a>Information</a>
+    <a href="#">Item 1</a>
+    <a href="#">Item 2</a>
+    <a href="#">Item 3</a>
+    <a href="#">Item 4</a>
+  </section>
+  <section>
+    <a>Events</a>
+    <a href="#">Item 1</a>
+    <a href="#">Item 2</a>
+    <a href="#">Item 3</a>
+    <a href="#">Item 4</a>
+  </section>
+</nav>
