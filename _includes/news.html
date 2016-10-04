@@ -1,0 +1,8 @@
+<aside class="col-sm-5 col-md-3 gsrPageAnnouncements">
+    <h2 class="announcementsTitle">Latest News</h2>
+    {% for post in site.posts limit 3 %}
+    <a class="announcementTitle" href="{{post.url}}">{{post.title}}</a>
+    <p class="announceDate"><time datetime="{{post.date | date_to_xmlschema}}">{{post.date | date:"%m.%y.%d"}}</time></p>
+    <p class="announceDescription">{{post.description}}</p>
+    {% endfor %}
+</aside>

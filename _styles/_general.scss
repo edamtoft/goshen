@@ -124,6 +124,10 @@ a.haunter-button:active {
 .AnnouncementsTitle {
     border-bottom: 2px solid $tertiaryFontColor;
 }
+a.announcementTitle {
+    font-size: 14pt;
+    color: $tertiaryFontColor;
+}
 .announceDate {
     color: $tertiaryFontColor;
 }
