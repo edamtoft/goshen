@@ -1,8 +1,11 @@
 .gsr-navbar {
-    position: relative; 
+    position: absolute; 
     height: 60px; 
     margin-top: 40px; 
     background: linear-gradient(to right, $navbar-background, lighten($navbar-background,30%));
+    left: 0;
+    right:0;
+    z-index:1030;    
     #gsr-nav {
         list-style: none;
         text-align: center;
@@ -40,20 +43,21 @@
         display: block;
         overflow: hidden;
         opacity: 0;
+        line-height: 40px;
     }
     .dropdown.open .dropdown-menu {
         max-height: 300px;
         opacity: 1;
     }
-    // .open .caret {
-    //     border-top-width: 0;
-    //     border-bottom: 4px solid $navbar-color;
-    // }
+     .open .caret {
+         border-top-width: 0;
+         border-bottom: 4px solid $navbar-color;
+     }
     .dropdown-menu {
-        background-color: transparentize($navbar-background, 0.2);
+        background-color: $navbar-background;
         border-radius: none;
         li {
-            line-height: 40px;
+            line-height: 40px !important;
             a {
                 color: $navbar-color;
                 display: block;
@@ -76,3 +80,7 @@
         }
     }
 }
+ .gsr-fixed-nav {
+        position: fixed;
+        margin-top: 0;
+    }

@@ -1,3 +1,9 @@
+#titleSection {
+    margin-top: 15%;
+}
+@media (max-width: 767px) {
+    #titleSection {margin-top: 50%;}
+}
 #gsrTitle {
     font-size: 64px;
     line-height: 70px;
@@ -5,15 +11,27 @@
     text-transform: uppercase;
     color: #fff;
     text-align: center;
-    margin: .95em 0 0;
+    margin: 0;
+}
+#gsrTitle2 {
+    font-size: 1em;
+}
+@media (max-width: 767px) {
+    #gsrTitle2 {
+        font-size: 0.75em;
+    }
 }
 #gsrSubtitle {
     font-family: 'Palanquin', sans-serif;
     font-size: 32px;
     text-align: center;
     color: #fff;
+    line-height: 44px;
 }
-@media screen and (max-width: 991px) {
+#gsrSubtitle a {
+    color: #fff;
+}
+@media (max-width: 991px) {
     #gsrTitle {
         font-size: 34px;
         line-height: 40px;
@@ -23,14 +41,14 @@
         font-size: 22px;
     }
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
     #frontRow {
-        margin-top: -23%;
+        margin-top: -275px;
     }
 }
 .boxThing,
 .pictureThing {
-    height: 250px;
+    height: 275px;
     padding: 10px;
 }
 .boxThing .subThing {
@@ -46,13 +64,16 @@
     height: 100%;
     width: 100%;
 }
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
     .boxThing {
         height: 200px;
         padding: 0;
     }
     .pictureThing {
         height: 150px;
+        padding: 0;
+    }
+    #attentionBar, #attentionBar>div {
         padding: 0;
     }
 }
@@ -62,4 +83,20 @@
     background-size: cover;
     height: 100%;
     position: relative;
+    transition:all .2s linear; 
+    -o-transition:all .2s linear; 
+    -moz-transition:all .2s linear; 
+    -webkit-transition:all .2s linear;
+}
+@media (max-width: 767px) {
+    .homepage-banner {min-height: 450px;}
+}
+@media (min-width: 768px) {
+    .homepage-banner {min-height: 650px}
+}
+@media (min-width: 992px) {
+    .homepage-banner {min-height: 715px;}
+}
+@media (min-width: 1345px) {
+    .homepage-banner {min-height: 940px;}
 }

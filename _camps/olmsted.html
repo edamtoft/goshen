@@ -28,6 +28,28 @@ CTA: Learn more below!
 	.cabbage td {margin-bottom: 2px; height: 60px; vertical-align: middle;}
 }
 </style>
+<style>
+    .gsr-flex-container {
+        -webkit-display: flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-justify-content: center;
+        justify-content: center;
+    }
+    .gsr-flex-item {
+        background-color: #fff;
+        margin: 15px;
+        padding: 15px;
+        width: 46%;
+    }
+    @media (min-width: 1200px) {
+        .gsr-flex-item {width: 30%;}
+    }
+    @media (max-width: 767px) {
+        .gsr-flex-item {width: 100%;}
+    }
+</style>
 <div class="row" style="padding-bottom: 3%;">
     <div class="col-sm-6 col-sm-offset-3">
         <h2 class="gsrtitle3 text-center">Olmsted's Program</h2>
@@ -39,123 +61,107 @@ CTA: Learn more below!
     </div>
 </div>
 <div class="row" style="background-image: url('/assets/bg_OLM.jpg'); background-position: center bottom; background-size: cover;">
-    <div class="col-sm-8 col-sm-offset-2" style="padding: 50px 0;">
-        <div class="col-sm-3" style="padding: 15px;">
-            <div class="col-xs-12" style="background-color: #fff; height: 350px; text-align: center; padding-top: 50px;">
-                <h2>Merit Badge<br/>Program</h2>
-                <h2>2016</h2>				
-            </div>
+    <div class="gsr-flex-container" style="padding: 50px 0;">
+        <div class="gsr-flex-item" style="text-align: center; padding-top: 50px;">
+            <h2>Merit Badge<br/>Program</h2>
+            <h2>2016</h2>				
         </div>
-        <div class="col-sm-3" style="padding: 15px;">
-            <div class="col-xs-12" style="background-color: #fff; height: 350px;">
-                <h3 style="text-align: center;">Aquatics</h3>
-                <ul>
-                    <li>Kayaking</li>
-                    <li>Canoeing</li>
-                    <li>Lifesaving</li>
-                    <li>Rowing</li>
-                    <li>Swimming</li>
-                    <li>Small Boat Sailing (min. 14 years old)</li>
-                </ul>				
-            </div>
+        <div class="gsr-flex-item">
+            <h3 style="text-align: center;">Aquatics</h3>
+            <ul>
+                <li>Kayaking</li>
+                <li>Canoeing</li>
+                <li>Lifesaving</li>
+                <li>Rowing</li>
+                <li>Swimming</li>
+                <li>Small Boat Sailing (min. 14 years old)</li>
+            </ul>				
         </div>
-        <div class="col-sm-3" style="padding: 15px;">
-            <div class="col-xs-12" style="background-color: #fff; height: 350px;">
-                <h3 style="text-align: center;">CultureCraft</h3>
-                <ul>
-                    <li>Art</li>
-                    <li>Sculpture</li>
-                    <li>Music</li>
-                    <li>Photography</li>
-                    <li>Cinematography</li>
-                    <li>Theater</li>
-                    <li>Architecture</li>
-                    <li>Archaeology</li>
-                    <li>Indian Lore</li>
-                    <li>American Heritage</li>
-                </ul>				
-            </div>
+        <div class="gsr-flex-item">
+            <h3 style="text-align: center;">CultureCraft</h3>
+            <ul>
+                <li>Art</li>
+                <li>Sculpture</li>
+                <li>Music</li>
+                <li>Photography</li>
+                <li>Cinematography</li>
+                <li>Theater</li>
+                <li>Architecture</li>
+                <li>Archaeology</li>
+                <li>Indian Lore</li>
+                <li>American Heritage</li>
+            </ul>				
         </div>
-        <div class="col-sm-3" style="padding: 15px;">
-            <div class="col-xs-12"  style="background-color: #fff; height: 350px;">
-                <h3 style="text-align: center;">Ecology</h3>
-                <ul>
-                    <li>Bird Study</li>
-                    <li>Plant Science</li>
-                    <li>Mammal Study</li>
-                    <li>Nature</li>
-                    <li>Oceanography</li>
-                    <li>Soil &amp; Water Conservation</li>
-                    <li>Geology</li>
-                    <li>Weather</li>
-                    <li>Environmental Science</li>
-                    <li>Forestry</li>
-                    <li>Insect Study</li>
-                    <li>Fish &amp; Wildlife Management</li>
-                    <li>Reptile &amp; Amphibian Study</li>
-                    <li>Sustainability</li>
-                </ul>				
-            </div>
+        <div class="gsr-flex-item">
+            <h3 style="text-align: center;">Ecology</h3>
+            <ul>
+                <li>Bird Study</li>
+                <li>Plant Science</li>
+                <li>Mammal Study</li>
+                <li>Nature</li>
+                <li>Oceanography</li>
+                <li>Soil &amp; Water Conservation</li>
+                <li>Geology</li>
+                <li>Weather</li>
+                <li>Environmental Science</li>
+                <li>Forestry</li>
+                <li>Insect Study</li>
+                <li>Fish &amp; Wildlife Management</li>
+                <li>Reptile &amp; Amphibian Study</li>
+                <li>Sustainability</li>
+            </ul>				
         </div>
-        <div class="col-sm-3" style="padding: 15px;">
-            <div class="col-xs-12" style="background-color: #fff; height: 350px;">
-                <h3 style="text-align: center;">Handicraft</h3>
-                <ul>
-                    <li>Personal Fitness</li>
-                    <li>Leatherwork</li>
-                    <li>Basketry</li>
-                    <li>Textile</li>
-                    <li>Wood Carving</li>
-                    <li>Pulp &amp; Paper</li>
-                </ul>				
-            </div>
+        <div class="gsr-flex-item">
+            <h3 style="text-align: center;">Handicraft</h3>
+            <ul>
+                <li>Personal Fitness</li>
+                <li>Leatherwork</li>
+                <li>Basketry</li>
+                <li>Textile</li>
+                <li>Wood Carving</li>
+                <li>Pulp &amp; Paper</li>
+            </ul>				
         </div>
-        <div class="col-sm-3" style="padding: 15px;">
-            <div class="col-xs-12"  style="background-color: #fff; height: 350px;">
-                <h3 style="text-align: center;">Scoutcraft</h3>
-                <ul>
-                    <li>Orienteering</li>
-                    <li>First Aid</li>
-                    <li>Wilderness Survival</li>
-                    <li>Camping</li>
-                    <li>Fishing</li>
-                    <li>Fly-Fishing</li>
-                    <li>Pioneering</li>
-                    <li>Emergency Preparedness</li>
-                    <li>Orienteering</li>
-                    <li>Backpacking</li>
-                    <li>Hiking</li>
-                </ul>				
-            </div>
+        <div class="gsr-flex-item">
+            <h3 style="text-align: center;">Scoutcraft</h3>
+            <ul>
+                <li>Orienteering</li>
+                <li>First Aid</li>
+                <li>Wilderness Survival</li>
+                <li>Camping</li>
+                <li>Fishing</li>
+                <li>Fly-Fishing</li>
+                <li>Pioneering</li>
+                <li>Emergency Preparedness</li>
+                <li>Orienteering</li>
+                <li>Backpacking</li>
+                <li>Hiking</li>
+            </ul>				
         </div>
-        <div class="col-sm-3" style="padding: 15px;">
-            <div class="col-xs-12"  style="background-color: #fff; height: 350px;">
-                <h3 style="text-align: center;">Shooting Sports</h3>
-                <ul>
-                    <li>Rifle Shooting</li>
-                    <li>Shotgun Shooting</li>
-                    <li>Archery</li>
-                </ul>				
-            </div>
+        <div class="gsr-flex-item">
+            <h3 style="text-align: center;">Shooting Sports</h3>
+            <ul>
+                <li>Rifle Shooting</li>
+                <li>Shotgun Shooting</li>
+                <li>Archery</li>
+            </ul>				
         </div>
-        <div class="col-sm-3" style="padding: 15px;">
-            <div class="col-xs-12" style="background-color: #fff; height: 350px;">
-                <h3 style="text-align: center;">Tech Center</h3>
-                <ul>
-                    <li>Robotics</li>
-                    <li>Game Design</li>
-                    <li>Electronics</li>
-                    <li>Electricity</li>
-                    <li>Digital Technology</li>
-                    <li>Scholarship</li>
-                    <li>Energy</li>
-                    <li>Aviation</li>
-                    <li>Space Exploration</li>
-                    <li>Communication</li>
-                    <li>Journalism</li>
-                    <li>Astronomy</li>
-                </ul>				
-            </div>
+        <div class="gsr-flex-item">
+            <h3 style="text-align: center;">Tech Center</h3>
+            <ul>
+                <li>Robotics</li>
+                <li>Game Design</li>
+                <li>Electronics</li>
+                <li>Electricity</li>
+                <li>Digital Technology</li>
+                <li>Scholarship</li>
+                <li>Energy</li>
+                <li>Aviation</li>
+                <li>Space Exploration</li>
+                <li>Communication</li>
+                <li>Journalism</li>
+                <li>Astronomy</li>
+            </ul>				
         </div>
     </div>
 </div>

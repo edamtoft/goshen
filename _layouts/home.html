@@ -3,12 +3,14 @@ layout: base
 ---
 <header class="container-fluid homepage-banner">
   {% include nav.html %}
-  <h1 id="gsrTitle" style="margin-top: 10%;">Goshen Scout Reservation</h1>
-  <p id="gsrSubtitle">Bowman &nbsp;&nbsp;|&nbsp;&nbsp; Marriott &nbsp;&nbsp;| &nbsp;&nbsp;Olmsted &nbsp;&nbsp;| &nbsp;&nbsp;PMI &nbsp;&nbsp;| &nbsp;&nbsp;Ross &nbsp;&nbsp;|&nbsp;&nbsp; Lenhok'sin</p>
-  <p id="CTAbutton" style="text-align: center; margin-top: 5%;">
-    <a class="haunter-button" href="#">Begin Your Adventure</a>
-  </p>
-  <div class="row" style="position: absolute; bottom: 0; height: 15em; width: 100%; background: linear-gradient(rgba(58,90,91,0.3), rgba(58,90,91,1));"></div>
+  <div id="titleSection">
+    <h1 id="gsrTitle">Goshen <br class="visible-xs-block"/><span id="gsrTitle2">Scout Reservation</span></h1>
+    <p id="gsrSubtitle"><a href="/bowman.html">Bowman</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="/marriott.html">Marriott</a> &nbsp;&nbsp;| &nbsp;&nbsp;<a href="/olmsted.html">Olmsted</a> &nbsp;&nbsp;| &nbsp;&nbsp;<a href="/pmi.html">PMI</a> &nbsp;&nbsp;| &nbsp;&nbsp;<a href="/ross.html">Ross</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="/lenhoksin.html">Lenhok'sin</a></p>
+    <p id="CTAbutton" style="text-align: center; margin-top: 5%;">
+      <a class="haunter-button" href="#">Begin Your Adventure</a>
+    </p>
+  </div>
+  <div class="row hidden-xs" style="position: absolute; bottom: 0; height: 15em; width: 100%; background: linear-gradient(rgba(58,90,91,0.3), rgba(58,90,91,1));"></div>
 </header>
 <main class="container-fluid">
   {{content}}
