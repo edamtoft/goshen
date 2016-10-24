@@ -162,13 +162,10 @@ a.announcementTitle {
 #ospSection {
     background-color: #0e0e0e;
     margin-top: 6%;
-    height: 600px;
 }
 @media (max-width: 991px) {
     #ospSection {
-        height: auto;
         margin-top: 0;
-        padding-bottom: 0;
     }
 }
 .osp-flex-container {
@@ -218,3 +215,16 @@ a.announcementTitle {
     .osp-flip-img {position: relative; bottom: auto;}
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+    .CDbio {text-align: left;}
+}
+
+.schedTable {border-collapse: separate; border-spacing: 2px; display: table; text-align: center; margin-top: 15px;}
+.schedTable thead {display: table-header-group;}
+.schedTable thead tr td {background-color: #0e0e0e; color: #FFF;}
+.schedTable tbody tr td {background-color: #EEE8AA; border-color: transparent;}
+@media (max-width: 767px) {
+	.schedTable, .schedTable tr, .schedTable td {display: block;}
+	.schedTable thead, .schedTable tbody {display: inline-block;}
+	.schedTable td {margin-bottom: 2px; height: 60px; vertical-align: middle;}
+}
