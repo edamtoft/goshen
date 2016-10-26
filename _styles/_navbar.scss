@@ -2,7 +2,7 @@
     position: absolute; 
     height: 60px; 
     margin-top: 40px; 
-    background: linear-gradient(to right, $navbar-background, lighten($navbar-background,30%));
+    background: linear-gradient(to right, $navbar-background, lighten($navbar-background,15%));
     left: 0;
     right:0;
     z-index:1030;    
