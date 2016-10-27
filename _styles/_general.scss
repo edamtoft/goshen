@@ -59,6 +59,23 @@ a.haunter-button:active {
     color: #2F384C;
     transition: background-color 0.3s ease-in, color 0.3s ease-in;
 }
+a.cubone-button {
+    display: inline-block;
+    width: 200px;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 2px solid transparent;
+    border-radius: 2px;
+    outline: none;
+    text-decoration: none;
+    font-size: 1.25em;
+    font-family: 'Palanquin', sans-serif;
+    transition: box-shadow 0.3s ease-out;
+}
+a.cubone-button:hover, a.cubone-button:active {
+    box-shadow: 0.5px 0.5px 10px #fff;
+    transition: box-shadow 0.3s ease-in;
+}
 
 //title underline series
 .gsrtitle::after {
@@ -227,4 +244,53 @@ a.announcementTitle {
 	.schedTable, .schedTable tr, .schedTable td {display: block;}
 	.schedTable thead, .schedTable tbody {display: inline-block;}
 	.schedTable td {margin-bottom: 2px; height: 60px; vertical-align: middle;}
+}
+.pictureDivider {
+    background-size: cover;
+    height: 150px;
+}
+@mixin compLineDiv($comp-border, $comp-padding) {
+    border-bottom: $comp-border; 
+    padding-bottom: $comp-padding;
+}
+.comparisonHeader {
+    padding: 5%;
+}
+.comparisonHeader h4, .comparisonHeader h3 {
+    text-align: center;
+}
+.comparisonHeader h4:first-child, .comparisonHeader h3 {
+    @include compLineDiv(1px ridge rgba(255,204,17,0.25), 10px)
+}
+.comparisonImage {
+    background-size: cover;
+    background-position: center center;
+    height: 200px;
+}
+.comparisonBody {
+    background-color: #0e0e0e;
+    color: #fff;
+    text-align: center;
+    padding: 5% 10%;
+}
+.comparisonBody img {
+    width: 25%;
+    height: auto;
+    margin: 15px 0;
+}
+.comparisonBody p {
+    @include compLineDiv(1px ridge rgba(0,0,0,0.25), 3%)
+    text-align: left;
+}
+.comparisonBody p:first-child {
+    border-top: 1px inset rgba(0,0,0,0.25);
+    padding-top: 3%;
+}
+.comparisonBody p:nth-last-child(2) {
+    border: none;
+}
+.comparisonBody p:last-child {
+    border: none;
+    padding: 0;
+    text-align: center;
 }
