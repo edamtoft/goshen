@@ -1,0 +1,89 @@
+//merit badge display
+@mixin gsr-flex-container() {
+    -webkit-display: flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.gsr-flex-container {
+    @include gsr-flex-container();
+}
+.gsr-flex-item {
+    background-color: #fff;
+    margin: 15px;
+    padding: 15px;
+    width: 46%;
+}
+@media (min-width: 1200px) {
+    .gsr-flex-item {width: 30%;}
+}
+@media (min-width: 1500px) {
+    .gsr-flex-item {width: 21%;}
+}
+@media (max-width: 767px) {
+    .gsr-flex-item {width: 100%;}
+}
+//camp post program and older scout program display
+#ospSection {
+    background-color: #0e0e0e;
+    margin-top: 6%;
+}
+@media (max-width: 991px) {
+    #ospSection {
+        margin-top: 0;
+    }
+}
+.osp-flex-container {
+    @include gsr-flex-container();
+    margin-top: -6%;
+}
+@media (max-width: 991px) {
+    .osp-flex-container {
+        padding: 0;
+        margin-top: 0;
+    }
+}
+.osp-flex-item {
+    background-color: #EEE8AA;
+    border-right: 0.5px solid #2F384C;
+    flex: 1;
+    width: 33%;
+    position: relative;
+    padding: 0 15px 100px 15px;
+}
+.osp-flex-item:last-child {
+    border: none;
+    padding-top: 50px;
+}
+.osp-flex-item:first-child {
+    padding-top: 50px; 
+}
+@media (max-width: 991px) {
+    .osp-flex-item {
+        width: 100%;
+        flex: auto;
+        padding-bottom: 50px;
+    }
+}
+.osp-flip-img {
+    position: absolute; bottom: 0;
+}
+@media (max-width: 991px) {
+    .osp-flex-item:first-child {
+        order: 2;
+    }
+    .osp-flip-img {position: relative; bottom: auto;}
+}
+//for bus information display
+.info-flex-container {
+    @include gsr-flex-container();
+}
+.info-flex-item {
+    background-color: #3A5A5B;
+    margin: 15px;
+    padding: 15px;
+    width: 20%;
+}
