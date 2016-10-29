@@ -87,3 +87,11 @@
     padding: 15px;
     width: 20%;
 }
+//for downloadables on about page
+.dl-flex-container {
+    @include gsr-flex-container();
+}
+.dl-flex-item {
+    width: 250px;
+    text-align: center;
+}

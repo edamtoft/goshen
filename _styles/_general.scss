@@ -50,6 +50,12 @@ h4 {
 .gsrAbout {
     background-color: $primaryBGcolor;
 }
+.gsrAbout img { 
+    width: 300px;
+    max-width: 100%; 
+    height: auto; 
+    display: block;
+}
 
 .gsrContents {
     list-style: none;
@@ -67,7 +73,7 @@ h4 {
 }
 
 .gsrPageAnnouncements {
-    margin-top: -5%;
+    margin-top: -6%;
     padding: 2%;
     padding-top: 0;
     background-color: $tertiaryBGcolor;
@@ -90,14 +96,4 @@ a.announcementTitle {
 
 @media (min-width: 768px) and (max-width: 991px) {
     .CDbio {text-align: left;}
-}
-
-.schedTable {border-collapse: separate; border-spacing: 2px; display: table; text-align: center; margin-top: 15px;}
-.schedTable thead {display: table-header-group;}
-.schedTable thead tr td {background-color: #0e0e0e; color: #FFF;}
-.schedTable tbody tr td {background-color: #EEE8AA; border-color: transparent;}
-@media (max-width: 767px) {
-	.schedTable, .schedTable tr, .schedTable td {display: block;}
-	.schedTable thead, .schedTable tbody {display: inline-block;}
-	.schedTable td {margin-bottom: 2px; height: 60px; vertical-align: middle;}
 }
