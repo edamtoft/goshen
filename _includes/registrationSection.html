@@ -2,25 +2,23 @@
     <div class="col-md-6">
         <div class="col-md-8 col-md-offset-4">
             <h2 class="gsrtitle">2017 Summer Schedule</h2>
+            {% assign availability = site.data.availability | where:"camp",page.campName %}
             <table class="table schedTable">
                 <thead>
                     <tr>
-                        <td>Week 1</td>
-                        <td>Week 2</td>
-                        <td>Week 3</td>
-                        <td>Week 4</td>
-                        <td>Week 5</td>
-                        <td>Week 6</td>
+                        {% for week in availability %}
+                        <td>{{week.title}}</td>
+                        {% endfor %}
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>6/26-7/2<br>Open</td>
-                        <td>7/3-7/9<br>Open</td>
-                        <td>7/10-7/16<br>Open</td>
-                        <td>7/17-7/23<br>Open</td>
-                        <td>7/24-7-30<br>Open</td>
-                        <td>week 6 dates<br>Open</td>
+                        <td class="availability-open">{{week.dates}}<br>{{week.status}}</td>
+                        <td class="availability-closed">{{week.dates}}<br>{{week.status}}</td>
+                        <td class="availability-filling">{{week.dates}}<br>{{week.status}}</td>
+                        {% else %}
+                        <td class="availability-unknown">{{week.dates}}<br>{{week.status}}</td>
+                        {% endif %}{% endfor %}
                     </tr>
                 </tbody>
             </table>
