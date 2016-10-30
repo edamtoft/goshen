@@ -43,12 +43,27 @@
       </li>
     </ul>
   </div>
-  <div class="ghostHamburger">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" aria-expanded="false" data-target="#ghostNav-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
+</nav>
+<div class="ghostHamburger">
+  <a class="offcanvas-nav-toggle">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+<nav class="offcanvas-nav">
+  <ul class="list-unstyled">
+    {% for camp in site.camps %}
+    <li><a href="{{camp.url}}">{{camp.title}}</a></li>
+    {% endfor %}
+    {% for program in site.programs %}
+    <li><a href="{{program.url}}">{{program.title}}</a></li>
+    {% endfor %}
+    <li><a href="/lenhoksin.html">Lenhok'sin High Adventure</a></li>
+    <li><a href="/registration.html">Registration</a></li>
+    {% for item in site.information %}
+    <li><a href="{{item.url}}">{{item.title}}</a></li>
+    {% endfor %}
+    {% for events in site.events %}
+    <li><a href="{{events.url}}">{{events.title}}</a></li>
+    {% endfor %}
+  </ul>
 </nav>

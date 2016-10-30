@@ -25,4 +25,8 @@ $(function() {
           $(".gsr-navbar").removeClass("gsr-fixed-nav");
       }
     });
+
+    $(".offcanvas-nav-toggle").click(function() {
+      $(".offcanvas-nav").toggleClass("in");
+    });
 });
