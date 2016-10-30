@@ -16,6 +16,15 @@
 .mainSchedTable tbody tr th, .mainSchedTable thead tr th {background-color: #3A5A5B; color: #fff; vertical-align: middle; font-family: 'Palanquin', sans-serif; font-size: 1.25em; text-align: left; padding: 10px;}
 .mainSchedTable tbody tr td {background-color: #CFD6D6; text-align: center; vertical-align: middle;}
 
+.gsrTable-dark {width: 100%; margin-bottom: 25px;}
+.gsrTable-dark thead tr, .gsrTable-dark tbody tr {height: 44px;}
+.gsrTable-dark tbody tr:nth-child(even) {background-color: #CFD6D6; color: #0e0e0e;}
+.gsrTable-dark thead tr {background-color: #1A3F40; color: #fff; text-align: center; font-family: 'Palanquin', sans-serif; font-size: 1.25em;}
+.gsrTable-dark tbody tr th, .gsrTable-dark thead tr th {text-align: left; font-weight: 400;}
+.gsrTable-dark tbody tr td {text-align: center;}
+.gsrTable-dark thead tr th, .gsrTable-dark thead tr td, .gsrTable-dark tbody tr th, .gsrTable-dark tbody tr td {padding: 10px;}
+
+
 .gsrDataTable {width: 100%;}
 .gsrDataTable thead tr td {background-color: #0e0e0e; color: #fff; font-family: 'Palanquin', sans-serif; font-size: 1.25em; padding: 10px;}
 .gsrDataTable tbody tr td {height: 50px; padding: 10px;}
