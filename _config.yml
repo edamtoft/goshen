@@ -16,3 +16,6 @@ defaults:
       path: ""
     values:
       image: "/assets/Hero_Home.jpg"
+      aboutImage: "/assets/G5001.jpg"
+      tagline: "Learn Cool Stuff!"
+      theme: "basic"

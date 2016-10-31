@@ -47,9 +47,6 @@ h4 {
     margin: 20px auto;
 }
 
-.gsrAbout {
-    background-color: $primaryBGcolor;
-}
 .gsrAbout img { 
     width: 300px;
     max-width: 100%; 
@@ -59,7 +56,6 @@ h4 {
 
 .gsrContents {
     list-style: none;
-    border-left: 4px solid $tertiaryFontColor;
     margin: 10px 0 25px 0;
     padding-left: 10px;
 }
@@ -76,24 +72,19 @@ h4 {
     margin-top: -6%;
     padding: 2%;
     padding-top: 0;
-    background-color: $tertiaryBGcolor;
-    color: $secondaryFontColor;
-}
-.AnnouncementsTitle {
-    border-bottom: 2px solid $tertiaryFontColor;
-}
-a.announcementTitle {
-    font-size: 14pt;
-    color: $secondaryFontColor;
-}
-.announceDate {
-    color: $tertiaryFontColor;
 }
 .announceDescription {
-    border-bottom: 1px solid $secondaryFontColor;
     padding-bottom: 15px;
+}
+a.announcementTitle {
+    color: inherit;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
     .CDbio {text-align: left;}
+}
+@media (min-width: 1500px) {
+    #staff-pic {
+        margin-top: -74px;
+    }
 }

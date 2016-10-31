@@ -1,28 +1,209 @@
-$primaryFontcolor: #fff;
-$secondaryFontcolor: #0e0e0e;
+@mixin gsrnavbg($navbar-background) {
+    background: linear-gradient(to right, $navbar-background, lighten($navbar-background,15%));
+    #gsrnav a {
+        &:active, &:hover, &:focus {
+            color: lighten($navbar-background,50%);
+        }
+    }
+    .dropdown-menu {
+        background-color: $navbar-background;
+        li a {
+            &:hover, &:focus {
+                color: lighten($navbar-background,50%);
+            }
+        }
+    }
+}
+@mixin gsrContents($border-color) {
+    border-left: 4px solid $border-color;
+}
+@mixin announceLine($border-color) {
+    border-bottom: 1px solid $border-color;
+}
+@mixin gsrtitleL($bgcolor) {
+    content: '';
+    width: 45px;
+    height: 2px;
+    background-color: $bgcolor;
+    display: block;
+    margin-top: 24px;
+}
+@mixin gsrtitleC($bgcolor) {
+    content: '';
+    width: 45px;
+    height: 2px;
+    background-color: $bgcolor;
+    display: block;
+    margin: 20px auto;
+}
+#basic {
+    .scheme1 {
+        background-color: #3A5A5B;
+        color: #fff;
+        .gsrtitleL::after {
+            @include gsrtitleL(#fff);
+        }
+        .gsrtitleC::after {
+            @include gsrtitleC(#fff);
+        }
+    }
+    .scheme2 {
+        background-color: #CFD6D6;
+        .gsrtitleL::after {
+            @include gsrtitleL(#212C48);
+        }
+        .gsrtitleC::after {
+            @include gsrtitleC(#212C48);
+        }
+    }
+    .scheme3 {
+        background-color: #444D65;
+        color: #fff;
+        .gsrtitleL::after {
+            @include gsrtitleL(#fff);
+        }
+        .gsrtitleC::after {
+            @include gsrtitleC(#fff);
+        }
+    }
+    .gsrContents {
+        @include gsrContents(#444D65);
+    }
+    .gsr-navbar {
+        @include gsrnavbg(#1A3F40);
+    }
+}
+#olmsted {
+    .scheme1 {
+        background-color: #EEE8AA;
+        .gsrtitleL::after {
+            @include gsrtitleL(#0e0e0e);
+        }
+        .gsrtitleC::after {
+            @include gsrtitleL(#0e0e0e);
+        }
+    }
+    .scheme2 {
+        background-color: #f1f1f1;
+        .gsrtitleL::after {
+            @include gsrtitleL(#0e0e0e);
+        }
+        .gsrtitleC::after {
+            @include gsrtitleL(#0e0e0e);
+        }
+    }
+    .scheme3 {
+        background-color: #0e0e0e;
+        color: #fff;
+        .gsrtitleL::after {
+            @include gsrtitleL(#fff);
+        }
+        .gsrtitleC::after {
+            @include gsrtitleC(#fff);
+        }
+        .announceDescription {
+            @include announceLine(#fff);
+        }
+    }
+    .highlight1 {
+        background-color: #FFCC11;
+        color: #ffcc11;
+    }
+    .gsrContents {
+        @include gsrContents(#FFCC11);
+    }
+    .gsr-navbar {
+        @include gsrnavbg(#1A3F40);
+    }
+}
+#marriott {
+    .scheme1 {
+        background-color: #560012;
+        color: #fff;
+        .gsrtitleL::after {
+            @include gsrtitleL(#fff);
+        }
+        .gsrtitleC::after {
+            @include gsrtitleC(#fff);
+        }
+    }
+    .scheme2 {
+        background-color: rgb(217,207,192);
+        .gsrtitleL::after {
+            @include gsrtitleL(#0e0e0e);
+        }
+        .gsrtitleC::after {
+            @include gsrtitleC(#0e0e0e);
+        }
+    }
+    .highlight1 {
+        background-color: #5facf2;
+        color: #5facf2;
+    }
+    .highlight2 {
+        background-color: #e42027;
+        color: #e42027;
+    }
+    .gsrContents {
+        @include gsrContents(#5facf2);
+    }
+    .gsr-navbar {
+        @include gsrnavbg(#1A3F40);
+    }
+}
 
-//Base Theme
-$primaryBGcolor-base: #3A5A5B;
-$primaryBGcolorlight-base: #CFD6D6;
-$secondaryBGcolor-base: #444D65;
-$primaryFontcolor-base: #212C48;
-$secondaryFontcolor-base: #1A3F40;
-
-//Olmsted Theme
-$primaryBGcolor-OLM: #FFCC11;
-$primaryBGcolorlight-OLM: #EEE8AA;
-$secondaryBGcolor-OLM: #FFF;
-$tertiaryBGcolor-OLM: #0e0e0e;
-$tertiaryBGcolorlight-OLM: #D3CFC6;
-$primaryFontcolor-OLM: #FFCC11;
-
-//Marriott Theme
-$primaryBGcolor-MAR: #9d102d;
-$secondaryBGcolor-MAR: #6C193F;
-$tertiaryBGcolor-MAR: #d21034;
-$quaternaryBGcolor-MAR: #d60077;
-$quinaryBGcolor-MAR: #ff5c00;
-$senaryBGcolor-MAR: #767a7d;
+#pmi {
+    .scheme1 {
+        background-color: #0e0e0e;
+        color: #fff;
+        .gsrtitleL::after {
+            @include gsrtitleL(#D40006);
+        }
+        .gsrtitleC::after {
+            @include gsrtitleC(#D40006);
+        }
+    }
+    .scheme2 {
+        color: #0e0e0e;
+        .gsrtitleL::after {
+            @include gsrtitleL(#D40006);
+        }
+        .gsrtitleC::after {
+            @include gsrtitleC(#D40006);
+        }
+    }
+    .scheme3 {
+        background-color: #AC9898;
+        color: #0e0e0e;
+        .announcementsTitle {
+            border-bottom: 2px solid #D40006;
+        }
+        .announceDescription {
+            @include announceLine(#0e0e0e);
+        }
+        .gsrtitleL::after {
+            @include gsrtitleL(#D40006);
+        }
+        .gsrtitleC::after {
+            @include gsrtitleC(#D40006);
+        }
+    }
+    .highlight1 {
+        color: #D40006;
+    }
+    .highlight2 {
+        background-color: #D40006;
+        color: #fff;
+    }
+    .gsrContents {
+        @include gsrContents(#fff);
+    }
+    .gsr-navbar {
+        @include gsrnavbg(#1E0001);
+    }
+    .schedTable thead tr td {background-color: #0e0e0e; color: #fff;}
+    .schedTable tbody tr td {background-color: #AC9898;}
+}
 
 //PMI Theme
 $primaryBGcolor-PMI: #D40006;

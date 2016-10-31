@@ -2,7 +2,6 @@
     position: absolute; 
     height: 60px; 
     margin-top: 40px; 
-    background: linear-gradient(to right, $navbar-background, lighten($navbar-background,15%));
     left: 0;
     right:0;
     z-index:1030;    
@@ -20,13 +19,12 @@
             height: 100%;
             font-family: 'Palanquin',sans-serif;
             font-size: 1.5em;
-            color: $navbar-color;
+            color: #fff;
             padding: 0 10px;
             margin: 0 10px;
             transition: all 0.3s ease-in-out;
             &:active , &:hover, &:focus {
                 text-decoration: none;
-                color: lighten($navbar-background,50%);
                 transition: all 0.3s ease-out-in;
             }
         }
@@ -51,19 +49,17 @@
     }
      .open .caret {
          border-top-width: 0;
-         border-bottom: 4px solid $navbar-color;
+         border-bottom: 4px solid #fff;
      }
     .dropdown-menu {
-        background-color: $navbar-background;
         border-radius: none;
         li {
             line-height: 40px !important;
             a {
-                color: $navbar-color;
+                color: #fff;
                 display: block;
                 height: 100%;
                 &:hover, &:focus {
-                    color: lighten($navbar-background,50%);
                     background-color: transparent;
                 }
             }
