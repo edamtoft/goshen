@@ -36,6 +36,84 @@
     display: block;
     margin: 20px auto;
 }
+@mixin theme(
+    $bgcolor-1,
+    $bgcolor-2,
+    $bgcolor-3,
+    $highcolor-1,
+    $highcolor-2,
+    $fontcolor-1,
+    $fontcolor-2,
+    $fontcolor-3,
+    $navbarbg
+) {
+    .scheme1 {
+        background-color: $bgcolor-1;
+        color: $fontcolor-1;
+        .gsrtitleL::after {
+            @include gsrtitleL($highcolor-1);
+        }
+        .gsrtitleC::after, .override.gsrtitleC::after {
+            @include gsrtitleC($highcolor-1);
+        }
+        .gsrFeeTable {color: $fontcolor-1;}
+        .gsrFeeTable thead tr {background-color: $highcolor-1; color: $fontcolor-1;}
+        .gsrFeeTable tbody tr {border-bottom: 1px solid $highcolor-1}
+    }
+    .scheme2 {
+        background-color: $bgcolor-2;
+        color: $fontcolor-2;
+        .gsrtitleL::after {
+            @include gsrtitleL($highcolor-2);
+        }
+        .gsrtitleC::after {
+            @include gsrtitleC($highcolor-2);
+        }
+        .osp-flex-item {
+            border-right: 0.5px solid $fontcolor-1;
+        }
+    }
+    .scheme3 {
+        background-color: $bgcolor-3;
+        color: $fontcolor-3;
+        .announcementsTitle {
+            border-bottom: 2px solid $highcolor-2;
+        }
+        .announceDescription {
+            @include announceLine($fontcolor-3);
+        }
+        .gsrtitleL::after {
+            @include gsrtitleL($highcolor-2);
+        }
+        .gsrtitleC::after {
+            @include gsrtitleC($highcolor-1);
+        }
+        .highlight1 {
+            color: $highcolor-2;
+        }
+        .gsrDataTable {color: $fontcolor-3}
+        .gsrDataTable thead {background-color: $bgcolor-1; color: $fontcolor-1;}
+        .gsrDataTable tr:nth-child(even) {background-color: $bgcolor-2; color: $fontcolor-2;}
+        .gsrDataTable a {
+            color: inherit;
+            &:hover {
+                color: $highcolor-2;
+            }
+        }
+    }
+    .gsrContents {
+        @include gsrContents($fontcolor-1);
+    }
+    .gsr-navbar {
+        @include gsrnavbg($navbarbg);
+    }
+    .schedTable thead tr td {background-color: $bgcolor-1; color: $fontcolor-1;}
+    .schedTable tbody tr td {background-color: $bgcolor-3; color: $fontcolor-3;}
+    .highlightbg {background-color: $highcolor-2;}
+}
+
+
+
 #basic {
     .scheme1 {
         background-color: #3A5A5B;
@@ -73,141 +151,81 @@
         @include gsrnavbg(#1A3F40);
     }
 }
-#olmsted {
-    .scheme1 {
-        background-color: #EEE8AA;
-        .gsrtitleL::after {
-            @include gsrtitleL(#0e0e0e);
-        }
-        .gsrtitleC::after {
-            @include gsrtitleL(#0e0e0e);
-        }
-    }
-    .scheme2 {
-        background-color: #f1f1f1;
-        .gsrtitleL::after {
-            @include gsrtitleL(#0e0e0e);
-        }
-        .gsrtitleC::after {
-            @include gsrtitleL(#0e0e0e);
-        }
-    }
-    .scheme3 {
-        background-color: #0e0e0e;
-        color: #fff;
-        .gsrtitleL::after {
-            @include gsrtitleL(#fff);
-        }
-        .gsrtitleC::after {
-            @include gsrtitleC(#fff);
-        }
-        .announceDescription {
-            @include announceLine(#fff);
-        }
-    }
-    .highlight1 {
-        background-color: #FFCC11;
-        color: #ffcc11;
-    }
-    .gsrContents {
-        @include gsrContents(#FFCC11);
-    }
-    .gsr-navbar {
-        @include gsrnavbg(#1A3F40);
-    }
+#bowman {
+        @include theme(
+        #021e14, //bgcolor-1
+        #F7E3D9, //bgcolor-2
+        #152638, //bgcolor-3
+        #ff6415, //highcolor-1
+        #587db1, //highcolor-2
+        #fff, //fontcolor-1
+        #0e0e0e, //fontcolor-2
+        #fff, //fontcolor-3
+        #000904 //navbarbg
+    );
 }
 #marriott {
-    .scheme1 {
-        background-color: #560012;
-        color: #fff;
-        .gsrtitleL::after {
-            @include gsrtitleL(#fff);
-        }
-        .gsrtitleC::after {
-            @include gsrtitleC(#fff);
-        }
-    }
-    .scheme2 {
-        background-color: rgb(217,207,192);
-        .gsrtitleL::after {
-            @include gsrtitleL(#0e0e0e);
-        }
-        .gsrtitleC::after {
-            @include gsrtitleC(#0e0e0e);
-        }
-    }
-    .highlight1 {
-        background-color: #5facf2;
-        color: #5facf2;
-    }
-    .highlight2 {
-        background-color: #e42027;
-        color: #e42027;
-    }
-    .gsrContents {
-        @include gsrContents(#5facf2);
-    }
-    .gsr-navbar {
-        @include gsrnavbg(#1A3F40);
-    }
+    @include theme(
+        #560012, //bgcolor-1
+        rgb(217,207,192), //bgcolor-2
+        #0e0e0e, //bgcolor-3
+        #5facf2, //highcolor-1
+        #e42027, //highcolor-2
+        #fff, //fontcolor-1
+        #0e0e0e, //fontcolor-2
+        #fff, //fontcolor-3
+        #230209 //navbarbg
+    );
 }
-
+#olmsted {
+    @include theme(
+        #EEE8AA, //bgcolor-1
+        #f1f1f1, //bgcolor-2
+        #0e0e0e, //bgcolor-3
+        #ffcc11, //highcolor-1
+        #ffcc11, //highcolor-2
+        #0e0e0e, //fontcolor-1
+        #0e0e0e, //fontcolor-2
+        #fff, //fontcolor-3
+        #5b4907 //navbarbg
+    );
+}   
 #pmi {
-    .scheme1 {
-        background-color: #0e0e0e;
-        color: #fff;
-        .gsrtitleL::after {
-            @include gsrtitleL(#D40006);
-        }
-        .gsrtitleC::after {
-            @include gsrtitleC(#D40006);
-        }
-    }
-    .scheme2 {
-        color: #0e0e0e;
-        .gsrtitleL::after {
-            @include gsrtitleL(#D40006);
-        }
-        .gsrtitleC::after {
-            @include gsrtitleC(#D40006);
-        }
-    }
-    .scheme3 {
-        background-color: #AC9898;
-        color: #0e0e0e;
-        .announcementsTitle {
-            border-bottom: 2px solid #D40006;
-        }
-        .announceDescription {
-            @include announceLine(#0e0e0e);
-        }
-        .gsrtitleL::after {
-            @include gsrtitleL(#D40006);
-        }
-        .gsrtitleC::after {
-            @include gsrtitleC(#D40006);
-        }
-    }
-    .highlight1 {
-        color: #D40006;
-    }
-    .highlight2 {
-        background-color: #D40006;
-        color: #fff;
-    }
-    .gsrContents {
-        @include gsrContents(#fff);
-    }
-    .gsr-navbar {
-        @include gsrnavbg(#1E0001);
-    }
-    .schedTable thead tr td {background-color: #0e0e0e; color: #fff;}
-    .schedTable tbody tr td {background-color: #AC9898;}
+    @include theme(
+        #0e0e0e, //bgcolor-1
+        #fff, //bgcolor-2
+        #AC9898, //bgcolor-3
+        #D40006, //highcolor-1
+        #D40006, //highcolor-2
+        #fff, //fontcolor-1
+        #0e0e0e, //fontcolor-2
+        #0e0e0e, //fontcolor-3
+        #1e0001 //navbarbg
+    )
 }
-
-//PMI Theme
-$primaryBGcolor-PMI: #D40006;
-$secondaryBGcolor-PMI: #8a5E5F;
-$tertiaryBGcolor-PMI: #56292A;
-$quarternaryBGcolor-PMI: #BC1F26;
-$quinaryBGcolor-PMI: #7E6868;
+#ross {
+    @include theme(
+        #838383, //bgcolor-1
+        #fff, //bgcolor-2
+        #0e0e0e, //bgcolor-3
+        rgb(179,2,37), //highcolor-1
+        #2180ac, //highcolor-2
+        #0e0e0e, //fontcolor-1
+        #0e0e0e, //fontcolor-2
+        #fff, //fontcolor-3
+        #06141c //navbarbg
+    )
+}
+#lha {
+    @include theme(
+        #0e0e0e, //bgcolor-1
+        #fff, //bgcolor-2
+        #AC9898, //bgcolor-3
+        #D40006, //highcolor-1
+        #D40006, //highcolor-2
+        #fff, //fontcolor-1
+        #0e0e0e, //fontcolor-2
+        #0e0e0e, //fontcolor-3
+        #1e0001 //navbarbg
+    )
+}

@@ -13,8 +13,11 @@
                 </thead>
                 <tbody>
                     <tr>
+                        {% for week in availability %}{% if week.status contains "Open" or "open" %}
                         <td class="availability-open">{{week.dates}}<br>{{week.status}}</td>
+                        {% elsif week.status contains "Closed" or "closed" %}
                         <td class="availability-closed">{{week.dates}}<br>{{week.status}}</td>
+                        {% elsif week.status contains "Filling" or "filling" %}
                         <td class="availability-filling">{{week.dates}}<br>{{week.status}}</td>
                         {% else %}
                         <td class="availability-unknown">{{week.dates}}<br>{{week.status}}</td>
@@ -26,9 +29,9 @@
         </div>
     </div>
     <div class="col-md-6 scheme1">
-        <div class="col-md-8">
+        <div class="col-md-8" style="padding: 10px 15px;">
             <h2 class="gsrtitleL">Registration Information</h2>
-            <table class="table">
+            <table class="gsrFeeTable">
                 <thead>
                     <tr>
                         <td>Payment</td>
@@ -54,12 +57,10 @@
                     </tr>
                 </tbody>
             </table>
+            <p>*All units will receive <b>two free adult leaders</b> per unit!</p>
             <p><b>Early Bird Special!</b> All who pay in full by the Early Bird Deadline will be eligible for the 2016 Goshen hat!</p>
-            <h3>Camperships</h3>
-            <p>Camperships are available for the 2016 Summer Season! For more information, click the link below.</p>
-            <h3>Questions?</h3>
-            <p>For more information about registration, including some tips and tricks for the registration process and information about camperships, please visit the:</p>
-            <p><a class="haunter-button" target="_blank" href="http://www.ncacbsa.org/outdoors/goshen-camps/register/">Goshen Registration page</a></p>
+            <p>For more information about registration, including quick facts, add-on program fees, the Goshen refund policy, and camperships, please visit our Registration Page.</p>
+            <p class="text-center"><a class="cubone-button text-center highlight1"  href="/registration.html">Learn More</a></p>
         </div>
     </div>
 </div>

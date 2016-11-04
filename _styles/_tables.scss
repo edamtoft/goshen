@@ -22,10 +22,13 @@
 .gsrTable-dark thead tr th, .gsrTable-dark thead tr td, .gsrTable-dark tbody tr th, .gsrTable-dark tbody tr td {padding: 10px;}
 
 
-.gsrDataTable {width: 100%; display: table;}
-.gsrDataTable thead tr td {background-color: #0e0e0e; color: #fff; font-family: 'Palanquin', sans-serif; font-size: 1.25em; padding: 10px;}
+.gsrDataTable {width: 100%; display: table; margin-bottom: 25px;}
+.gsrDataTable thead tr td {font-family: 'Palanquin', sans-serif; font-size: 1.25em; padding: 10px;}
 .gsrDataTable tbody tr td {height: 50px; padding: 10px;}
-.gsrDataTable tbody tr:nth-child(even) {background-color: #D3CFC6;}
 
 .gsrTable-solid {width: 100%; border-collapse: separate; border-spacing: 2px;}
 .gsrTable-solid tbody tr td {background-color: #EEE8AA; text-align: center; padding: 10px;}
+
+.gsrFeeTable {width: 100%; display: table; margin: 25px 0;}
+.gsrFeeTable thead {font-family: 'Palanquin', sans-serif; font-size: 1.25em;}
+.gsrFeeTable td {padding: 10px; text-align: center;}
