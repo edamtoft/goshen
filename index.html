@@ -20,22 +20,22 @@ block4-link: /events/goshenat50.html
 picture-block4: /assets/Home04.jpg
 ---
 {% include homeBlocks.html %}
-<div class="row" style="background-color: #CFD6D6; padding-bottom: 5%;">
+<div class="row scheme2" id="UpcomingEvents">
     <div class="col-sm-8 col-sm-offset-2">
-        <h2 class="gsrtitle3 text-center">Upcoming Events Version 1</h2>
-        <div class="col-md-6">
-            <h3 style="color: #212C48; text-transform: uppercase; font-size: 55px; font-family: 'Palanquin',sans-serif;">01 SEPT</h3>
-            <h4 style="color: #1A3F40; font-family: 'Palanquin',sans-serif; font-size: 33px; text-transform: uppercase; padding-bottom: 10px; border-bottom: 4px dotted #0A142E; margin-bottom: 20px;">Family Camp</h4>
-            <p>Come have the best family camp experience of your life.</p>
+        <h2 class="gsrtitleC text-center">Upcoming Events</h2>
+        <div class="col-md-6" id="event-prime">
+            <h3>MONTH DD</h3>
+            <h4>Event Title</h4>
+            <p>Event Description</p>
         </div>
-        <div class="col-md-6">
-            <div style="background-color: #ADB5C8; min-height: 90px; padding: 10px; overflow: hidden; margin-bottom: 5px;">
-                <div style="width: 20%; float: left; text-align: center; border-right: 2px solid #0A142E;">
-                    <p style="font-family: 'Palanquin',sans-serif; font-size: 35px; color: #212C48; line-height: 1; margin: 0;">23<span style="display: block; font-family: 'Palanquin', sans-serif; font-size: 24px; color: #1A3F40;">SEPT</span></p>
+        <div class="col-md-6" id="event-other">
+            <div class="event-wrapper">
+                <div class="event-date">
+                    <p>23<span>SEPT</span></p>
                 </div>
-                <div style="width: 80%; float: left; text-align: left; padding-left: 10px; height: 70px; overflow: hidden; text-overflow: ellipsis;">
-                    <h4 style="font-size: 14px; color: #212C48; font-weight: 700;">Deadline for Fall Scouter's Digest</h4>
-                    <p style="height: 13px; line-height: 1.4; margin: 0;">Submissions due by this date.</p>
+                <div class="event-descrip">
+                    <h4>Deadline for Fall Scouter's Digest</h4>
+                    <p>Submissions due by this date.</p>
                 </div>
             </div>
             <div style="background-color: #ADB5C8; min-height: 90px; padding: 10px; overflow: hidden; margin-bottom: 5px;">
@@ -59,60 +59,15 @@ picture-block4: /assets/Home04.jpg
         </div>
     </div>
 </div>
-<div class="row" style="background-color: #FFFCF6; padding-bottom: 5%;">
-    <div class="col-sm-8 col-sm-offset-2">
-        <h2 class="gsrtitle3 text-center">Upcoming Events Version 2</h2>
-        <div id="large-event" class="col-sm-4">
-            <div>
-                <span style="margin-top: -30px; font-size: 110px; line-height: 94px; color: #212C48; float: left; margin-right: 15px; font-family: 'Palanquin Dark', sans-serif;">30</span>
-                <p style="overflow: hidden; font-size: 25px; color: #212C48; text-transform: uppercase; line-height: 35px; border-bottom: 1px solid #212C48; font-family: 'Palanquin', sans-serif; padding-bottom: 10px; margin-bottom: 10px;">
-                    September
-                    <br/>
-                    <span style="font-size: 24px;">2016</span>
-                </p>
-            </div>
-            <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut sollicitudin lectus, sodales posuere odio. Nam vehicula convallis nisi quis dictum. Suspendisse rutrum est nunc, in pharetra leo consectetur ut.</p>
-            </div>
+<div class="row scheme5">
+    <div class="col-md-8 col-md-offset-2">
+        <h2 class="gsrtitleC text-center">Latest News</h2>
+        {% for post in site.posts limit 3 %}
+        <div class="col-sm-4">
+            <h3>{{post.title}}</h3>
+            <p class="highlight1"><time datetime="{{post.date | date_to_xmlschema}}">{{post.date | date:"%m.%d.%Y"}}</time></p>
+            <p>{{post.description}}</p>
+            <p class="text-center"><a class="ghastly-button text-center" href="{{post.url}}" style="background-color: #212C48;">Read More</a></p>
         </div>
-        
-        <div id="events-container" class="col-sm-8">
-            <div class="col-sm-6">
-                <div style="float: left; position: relative; height: 120px;">
-                    <span style="font-size: 20px; font-family: 'Palanquin Dark', sans-serif; display: block;">25</span>
-                    <span style="display: block; font-size: 17px; text-transform: uppercase; transform: rotate(270deg); font-family: 'Palanquin', sans-serif; margin-top: 12px; margin-left: -8px; margin-right: -12px;">September</span>
-                </div>
-                <div style="height: 120px;">
-                    <h3 style="font-size: 17px; margin-bottom: 8px; text-transform: uppercase; font-weight: normal; font-family: 'Palanquin', sans-serif; margin-top: 10px;">Family Camp</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut sollicitudin lectus, sodales posuere odio.</p>
-                </div>
-                <div style="float: left; position: relative; height: 120px;">
-                    <span style="font-size: 20px; font-family: 'Palanquin Dark', sans-serif; display: block;">25</span>
-                    <span style="display: block; font-size: 17px; text-transform: uppercase; transform: rotate(270deg); font-family: 'Palanquin', sans-serif; margin-top: 12px; margin-left: -8px; margin-right: -12px;">September</span>
-                </div>
-                <div>
-                    <h3 style="font-size: 17px; margin-bottom: 8px; text-transform: uppercase; font-weight: normal; font-family: 'Palanquin', sans-serif; margin-top: 10px;">Family Camp</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut sollicitudin lectus, sodales posuere odio.</p>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div style="float: left; position: relative; height: 120px;">
-                    <span style="font-size: 20px; font-family: 'Palanquin Dark', sans-serif; display: block;">25</span>
-                    <span style="display: block; font-size: 17px; text-transform: uppercase; transform: rotate(270deg); font-family: 'Palanquin', sans-serif; margin-top: 12px; margin-left: -8px; margin-right: -12px;">September</span>
-                </div>
-                <div style="height: 120px;">
-                    <h3 style="font-size: 17px; margin-bottom: 8px; text-transform: uppercase; font-weight: normal; font-family: 'Palanquin', sans-serif; margin-top: 10px;">Family Camp</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut sollicitudin lectus, sodales posuere odio.</p>
-                </div>
-                <div style="float: left; position: relative; height: 120px;">
-                    <span style="font-size: 20px; font-family: 'Palanquin Dark', sans-serif; display: block;">25</span>
-                    <span style="display: block; font-size: 17px; text-transform: uppercase; transform: rotate(270deg); font-family: 'Palanquin', sans-serif; margin-top: 12px; margin-left: -8px; margin-right: -12px;">September</span>
-                </div>
-                <div>
-                    <h3 style="font-size: 17px; margin-bottom: 8px; text-transform: uppercase; font-weight: normal; font-family: 'Palanquin', sans-serif; margin-top: 10px;">Family Camp</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut sollicitudin lectus, sodales posuere odio.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+        {% endfor %}
 </div>

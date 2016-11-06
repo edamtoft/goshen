@@ -115,40 +115,36 @@
 
 
 #basic {
-    .scheme1 {
-        background-color: #3A5A5B;
-        color: #fff;
+    @include theme(
+        #3A5A5B, //bgcolor-1
+        #CFD6D6, //bgcolor-2
+        #819697, //bgcolor-3
+        #6B482B, //highcolor-1
+        #6B482B, //highcolor-2
+        #fff, //fontcolor-1
+        #0e0e0e, //fontcolor-2
+        #0e0e0e, //fontcolor-3
+        #1A3F40 //navbarbg
+    );
+    .scheme4 {
+        background-color: #212C48;
+        font-color: #fff;
         .gsrtitleL::after {
-            @include gsrtitleL(#fff);
+            @include gsrtitleL(#6B482B);
         }
         .gsrtitleC::after {
-            @include gsrtitleC(#fff);
+            @include gsrtitleC(#6B482B);
         }
     }
-    .scheme2 {
-        background-color: #CFD6D6;
+    .scheme5 {
+        background-color: #fff;
+        font-color: #0e0e0e;
         .gsrtitleL::after {
-            @include gsrtitleL(#212C48);
+            @include gsrtitleL(#6B482B);
         }
         .gsrtitleC::after {
-            @include gsrtitleC(#212C48);
+            @include gsrtitleC(#6B482B);
         }
-    }
-    .scheme3 {
-        background-color: #444D65;
-        color: #fff;
-        .gsrtitleL::after {
-            @include gsrtitleL(#fff);
-        }
-        .gsrtitleC::after {
-            @include gsrtitleC(#fff);
-        }
-    }
-    .gsrContents {
-        @include gsrContents(#444D65);
-    }
-    .gsr-navbar {
-        @include gsrnavbg(#1A3F40);
     }
 }
 #bowman {

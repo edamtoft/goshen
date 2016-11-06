@@ -100,3 +100,71 @@
 @media (min-width: 1345px) {
     .homepage-banner {min-height: 940px;}
 }
+#UpcomingEvents {
+    #event-prime {
+        h3 {
+            color: #212C48;
+            text-transform: uppercase;
+            font-size: 55px;
+            font-family: 'Palanquin', sans-serif;
+        }
+        h4 {
+            color: #1A3F40; 
+            font-family: 'Palanquin',sans-serif; 
+            font-size: 33px; 
+            text-transform: uppercase; 
+            padding-bottom: 10px; 
+            border-bottom: 2px solid #0A142E; 
+            margin-bottom: 20px;
+        }
+    }
+    #event-other {
+        .event-wrapper {
+            background-color: #ADB5C8; 
+            min-height: 90px; 
+            padding: 10px; 
+            overflow: hidden; 
+            margin-bottom: 5px;
+            .event-date {
+                width: 20%; 
+                float: left; 
+                text-align: center; 
+                border-right: 2px solid #0A142E;
+                p {
+                    font-family: 'Palanquin',sans-serif; 
+                    font-size: 35px; 
+                    color: #212C48; 
+                    line-height: 1; 
+                    margin: 0;
+                    span {
+                        display: block; 
+                        font-family: 'Palanquin', 
+                        sans-serif; 
+                        font-size: 24px; 
+                        color: #1A3F40;
+                    }
+                }
+            }
+            .event-descrip {
+                width: 80%; 
+                float: left; 
+                text-align: left; 
+                padding-left: 10px; 
+                height: 70px; 
+                overflow: hidden; 
+                text-overflow: ellipsis;
+                h4 {
+                    font-size: 14px; 
+                    color: #212C48; 
+                    font-weight: 700;
+                }
+                p {
+                    height: 13px; 
+                    line-height: 1.4; 
+                    margin: 0;
+                }
+
+            }
+        }
+    }
+}
