@@ -6,9 +6,9 @@ image: /assets/Hero_Registration.jpg
 imagePosition: center 60%
 ---
 {% include aboutSection-ConAnn.html %}
-<div class="row" style="background-color: #CFD6D6;">
+<section class="row scheme2">
     <div class="col-md-8 col-md-offset-2">
-        <h2 class="gsrtitle3 text-center">Quick Facts</h2>
+        <h2 class="gsrtitleC text-center">Quick Facts</h2>
         <div class="col-sm-3">
             <h3>
                 <span class="fa-stack">
@@ -50,8 +50,8 @@ imagePosition: center 60%
             <p>With the new online system, no username or password is required. Everything is handled with the email address you provide.</p>
         </div>
     </div>
-</div>
-<div class="row" style="background-color: #CFD6D6;">
+</section>
+<section class="row scheme2">
     <div class="col-md-8 col-md-offset-2">
         <div class="col-sm-3">
             <h3>
@@ -94,21 +94,18 @@ imagePosition: center 60%
             <p>If you plan on applying for a campership for a youth, please DO NOT pay the full amount right away. Voucher codes will be sent out after camperships are awarded.</p>
         </div>
     </div>
-</div>
-<div class="row">
+</section>
+<section class="row scheme5">
     <div class="col-md-8 col-md-offset-2">
-        <h2 class="gsrtitle3 text-center">2017 Schedule &amp; Availability</h2>
+        <h2 class="gsrtitleC text-center">2017 Schedule &amp; Availability</h2>
         <p>Availability (below) indicates if new units are able to register for a specific week of camp. If your unit has already reserved a week at camp then your Goshen coordinator will be able to add campers as space allows.</p>
         <table class="mainSchedTable">
             <thead>
                 <tr>
                     <th></th>
-                    <td>Week 1</td>
-                    <td>Week 2</td>
-                    <td>Week 3</td>
-                    <td>Week 4</td>
-                    <td>Week 5</td>
-                    <td>Week 6</td>
+                    {% for week in availability %}
+                    <td>{{week.title}}
+                    {% endfor %}
                 </tr>
             </thead>
             <tbody>
@@ -121,15 +118,20 @@ imagePosition: center 60%
                     <td>7/15-7/22<br/>Open</td>
                     <td>7/22-7/29<br/>Open</td>
                 </tr>
+                {% for week in availability %}
                 <tr>
-                    <th>Camp Marriott</th>
-                    <td>6/19-6/24<br/>(LDS Week)<br/>Open</td>
-                    <td>6/24-7/1<br/>Open</td>
-                    <td>7/1-7/8<br/>Open</td>
-                    <td>7/8-7/15<br/>Open</td>
-                    <td>7/15-7/22<br/>Open</td>
-                    <td>7/23-7/29<br/>(Specialty Week)<br/>Open</td>
+                    <th>{{week.camp}}</th>
+                    {% if week.status contains "Open" or "open" %}
+                    <td class="availability-open">{{week.dates}}<br>{{week.status}}</td>
+                    {% elsif week.status contains "Closed" or "closed" %}
+                    <td class="availability-closed">{{week.dates}}<br>{{week.status}}</td>
+                    {% elsif week.status contains "Filling" or "filling" %}
+                    <td class="availability-filling">{{week.dates}}<br>{{week.status}}</td>
+                    {% else %}
+                    <td class="availability-unknown">{{week.dates}}<br>{{week.status}}</td>
+                    {% endif %}
                 </tr>
+                {% endfor %}
             </tbody>
         </table>
     </div>

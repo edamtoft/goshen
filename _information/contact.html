@@ -24,6 +24,8 @@ imagePosition: center 15%
             <p><b>Phone:</b> (301) 214-9195</p>
         </div>
         <div class="col-sm-6 col-sm-offset-3">
+            <h3 class="gsrtitleL">Social Media</h3>
+            <p><b>Facebook:</b> <a href="www.facebook.com/goshenncac" target="_blank"><span style="word-wrap: break-word;">www.facebook.com/GOSHENNCAC</span></a></p> 
             <h3 class="gsrtitleL">Summer Camp Post Office Contact</h3>
             <p><b>Phone (summer only):</b> (540) 997-1376</p>
             <h3 class="gsrtitleL">Sending Mail</h3>
@@ -48,8 +50,17 @@ imagePosition: center 15%
         </div>
     </div>
 </div>
-<div class="row">
+<div class="row scheme5">
     <div class="col-md-8 col-md-offset-2">
-        <h2 class="gsrtitle3 text-center">Individual Camps</h2>
+        <h2 class="gsrtitleC text-center">Individual Camps</h2>
+        {% for camp in site.camps %}
+            <div class="col-md-4">
+                <h3 class="gsrtitleL">{{camp.campName}}</h3>
+                <p><b>Camp Director:</b> {{camp.campDirectorName}}</p>
+                <p><b>Email:</b> <a href="mailto: {{camp.campEmail}}">{{camp.campEmail}}</a></p>
+                <p><b>Phone (summer only):</b> {{camp.campPhone}}</p>
+                <p><b>Facebook:</b> <a href="{{camp.campFacebook}}" target="_blank"><span style="word-wrap: break-word;">{{camp.campFacebook}}</span></a></p>
+            </div>
+        {% endfor %}
     </div>
 </div>
