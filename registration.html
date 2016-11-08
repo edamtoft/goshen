@@ -4,6 +4,7 @@ layout: page
 theme: basic
 image: /assets/Hero_Registration.jpg
 imagePosition: center 60%
+category: Registration
 ---
 {% include aboutSection-ConAnn.html %}
 <section class="row scheme2">
@@ -99,13 +100,17 @@ imagePosition: center 60%
     <div class="col-md-8 col-md-offset-2">
         <h2 class="gsrtitleC text-center">2017 Schedule &amp; Availability</h2>
         <p>Availability (below) indicates if new units are able to register for a specific week of camp. If your unit has already reserved a week at camp then your Goshen coordinator will be able to add campers as space allows.</p>
+        {% assign availability = site.data.availability %}
         <table class="mainSchedTable">
             <thead>
                 <tr>
                     <th></th>
-                    {% for week in availability %}
-                    <td>{{week.title}}
-                    {% endfor %}
+                    <td>Week 1</td>
+                    <td>Week 2</td>
+                    <td>Week 3</td>
+                    <td>Week 4</td>
+                    <td>Week 5</td>
+                    <td>Week 6</td>
                 </tr>
             </thead>
             <tbody>
@@ -118,27 +123,21 @@ imagePosition: center 60%
                     <td>7/15-7/22<br/>Open</td>
                     <td>7/22-7/29<br/>Open</td>
                 </tr>
-                {% for week in availability %}
+                {% for week in schedule %}
                 <tr>
-                    <th>{{week.camp}}</th>
-                    {% if week.status contains "Open" or "open" %}
-                    <td class="availability-open">{{week.dates}}<br>{{week.status}}</td>
-                    {% elsif week.status contains "Closed" or "closed" %}
-                    <td class="availability-closed">{{week.dates}}<br>{{week.status}}</td>
-                    {% elsif week.status contains "Filling" or "filling" %}
-                    <td class="availability-filling">{{week.dates}}<br>{{week.status}}</td>
-                    {% else %}
-                    <td class="availability-unknown">{{week.dates}}<br>{{week.status}}</td>
-                    {% endif %}
+                    <th>{{camp.camp}}</th>
+                    <td>{{camp.week1}}</td>
+                    <td>{{camp.week2}}</td>
+                    <td>{{camp.week3}}</td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
     </div>
-</div>
-<div class="row" style="background-color: #CFD6D6;">
+</section>
+<div class="row scheme2">
     <div class="col-md-8 col-md-offset-2">
-        <h2 class="gsrtitle3 text-center">Register Now</h2>
+        <h2 class="gsrtitleC text-center">Register Now</h2>
     </div>
 </div>
 <div class="row" style="background-color: #3A5A5B; color: #fff;">

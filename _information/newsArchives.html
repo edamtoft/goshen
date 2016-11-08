@@ -1,4 +1,28 @@
 ---
 layout: page
 title: Latest News
----
+---  
+    <section class="row scheme1">
+        <div class="col-md-8 col-md-offset-2">
+        {% for post in site.posts %}
+        {% if forloop.first == true %}
+            <h2 class="gsrtitleC text-center">Recent News</h2>
+            <h3>{{post.title}}</h3>
+            {{post.excerpt}}
+            <p>{{post.category}}</p>
+            <p><a href="{{post.url}}" class="ghastly-button text-center">Read More</a></p>
+        </div>
+    </section>
+    <section class="row scheme2">
+        <div class="col-md-8 col-md-offset-2">
+            <h2 class="gsrtitleC text-center">Other News</h2>
+    {% else %}
+            <div class="col-md-4">
+                <h3>{{post.title}}</h3>
+                {{post.excerpt}}
+                <p><a href="{{post.url}}" class="ghastly-button text-center">Read More</a></p>
+            </div>
+    {% endif %}
+    {% endfor %}
+        </div>
+    </section>

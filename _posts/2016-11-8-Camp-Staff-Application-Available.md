@@ -1,9 +1,9 @@
 ---
-title: Registration is Now Open!
+title: Camp Staff Application Available
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 layout: page
-category: Registration
-tags: [Bowman, Marriott, Olmsted, PMI, Ross, Lenhok'sin, Specialty Week, Provisional, Venturing, LDS]
+category: Camp Staff
+tags: [Bowman, Marriott, Olmsted, PMI, Ross, Lenhok'sin, Specialty Week, Provisional, Venturing, LDS, Camp Staff]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et ultrices erat, sit amet malesuada nibh. Suspendisse vel luctus metus. Pellentesque ornare justo sit amet gravida posuere. Aliquam risus odio, varius id pharetra eu, maximus at elit. Maecenas convallis, ante eu porttitor hendrerit, ante mauris tristique ipsum, nec imperdiet elit magna in diam. Curabitur ut arcu suscipit, sagittis odio ut, vestibulum dolor. Ut feugiat tempus lectus, eget auctor ipsum pulvinar sed. Pellentesque commodo ipsum in tincidunt porta. Etiam commodo, nisi ac tempor eleifend, elit diam porttitor lectus, non posuere turpis ex at est. Vestibulum tempus mi sed magna rhoncus elementum. Curabitur vitae scelerisque felis.

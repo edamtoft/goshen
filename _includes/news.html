@@ -1,8 +1,9 @@
 <aside class="col-sm-5 col-sm-push-7 col-md-3 col-md-push-9 gsrPageAnnouncements scheme3">
     <h2 class="announcementsTitle">Latest News</h2>
-    {% for post in site.posts limit 3 %}
-    <h3><a class="announcementTitle" href="{{post.url}}">{{post.title}}</a></h3>
-    <p class="highlight1"><time datetime="{{post.date | date_to_xmlschema}}">{{post.date | date:"%m.%d.%Y"}}</time></p>
-    <p class="announceDescription">{{post.description}}</p>
+        {% assign posts = site.posts | where_exp: "cat", "page.category contains cat.category" %}
+        {% for post in posts limit:3 %}
+            <h3><a class="announcementTitle" href="{{post.url}}">{{post.title}}</a></h3>
+            <p class="highlight1"><time datetime="{{post.date | date_to_xmlschema}}">{{post.date | date:"%m.%d.%Y"}}</time></p>
+            <p class="announceDescription">{{post.description}}</p>
     {% endfor %}
 </aside>
