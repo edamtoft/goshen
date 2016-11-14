@@ -84,6 +84,11 @@
     padding: 15px;
     width: 20%;
 }
+@media (max-width: 767px) {
+    .info-flex-item {
+        width: 100%;
+    }
+}
 //for downloadables on about page
 .dl-flex-container {
     @include gsr-flex-container();
@@ -91,4 +96,16 @@
 .dl-flex-item {
     width: 250px;
     text-align: center;
+}
+//for registration section include
+.reg-flex-container {
+    @include gsr-flex-container();
+}
+.reg-flex-item {
+    width: 50%;
+}
+@media (max-width: 992px) {
+    .reg-flex-item {
+        width: 100%;
+    }
 }

@@ -56,9 +56,15 @@
         .gsrtitleC::after, .override.gsrtitleC::after {
             @include gsrtitleC($highcolor-1);
         }
+        .gsrContents a {
+            color: $highcolor-1;
+            &:active, &:hover, &:focus {
+                color: $fontcolor-1;
+            }
+        }
         .gsrFeeTable {color: $fontcolor-1;}
         .gsrFeeTable thead tr {background-color: $highcolor-1; color: $fontcolor-1;}
-        .gsrFeeTable tbody tr {border-bottom: 1px solid $highcolor-1}
+        .gsrFeeTable tbody tr {border-bottom: 1px solid $highcolor-1;}
     }
     .scheme2 {
         background-color: $bgcolor-2;
@@ -104,8 +110,16 @@
     .gsrContents {
         @include gsrContents($fontcolor-1);
     }
-    .gsr-navbar {
+    .gsr-nav-main {
         @include gsrnavbg($navbarbg);
+        }
+    .offcanvas-nav {
+        background-color: $navbarbg;
+        a {
+            &:active, &:hover, &:focus {
+            color: lighten($navbarbg,50%);
+        }
+        }
     }
     .schedTable thead tr td {background-color: $bgcolor-1; color: $fontcolor-1;}
     .schedTable tbody tr td {background-color: $bgcolor-3; color: $fontcolor-3;}

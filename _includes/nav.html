@@ -1,5 +1,5 @@
-<nav class="gsr-navbar hidden-xs">
-  <div id="gsr-nav-collapse" style="display: block;">
+<nav class="gsr-navbar">
+  <div class="gsr-nav-main hidden-xs hidden-sm" style="display: block;">
     <ul id="gsr-nav" style="margin-left: -2%;">
       <li><a href="/">Home</a></li>
       <li><a href="/about.html">About</a></li>
@@ -23,7 +23,7 @@
           <li><a href="/lenhoksin.html">Lenhok'sin High Adventure</a></li>
         </ul>
       </li>
-      <li style="width: 10%;"><img class="logo" src="/assets/logo.png"></li></li>
+      <li style="width: 10%;"><img class="logo" src="/assets/logo.png"></li>
       <li><a href="/registration.html">Registration</a></li>
       <li class="dropdown">
         <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Information <span class="caret"></span></a>
@@ -43,27 +43,49 @@
       </li>
     </ul>
   </div>
+  <div class="hidden-md hidden-lg">
+    <a class="offcanvas-nav-toggle">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
 </nav>
-<div class="ghostHamburger">
-  <a class="offcanvas-nav-toggle">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
 <nav class="offcanvas-nav">
-  <ul class="list-unstyled">
-    {% for camp in site.camps %}
-    <li><a href="{{camp.url}}">{{camp.title}}</a></li>
-    {% endfor %}
-    {% for program in site.programs %}
-    <li><a href="{{program.url}}">{{program.title}}</a></li>
-    {% endfor %}
-    <li><a href="/lenhoksin.html">Lenhok'sin High Adventure</a></li>
+  <ul class="list-unstyled" style="padding-left: 25px; padding-top: 25px;">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li class="dropdown">
+      <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Camps <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        {% for item in site.camps %}
+        <li><a href="{{item.url}}">{{item.title}}</a></li>
+        {% endfor %}
+        <li><a href="/lenhoksin.html">Lenhok'sin High Adventure</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Programs <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        {% for item in site.programs %}
+        <li><a href="{{item.url}}">{{item.title}}</a></li>
+        {% endfor %}
+      </ul>
+    </li>
     <li><a href="/registration.html">Registration</a></li>
-    {% for item in site.information %}
-    <li><a href="{{item.url}}">{{item.title}}</a></li>
-    {% endfor %}
-    {% for events in site.events %}
-    <li><a href="{{events.url}}">{{events.title}}</a></li>
-    {% endfor %}
+    <li class="dropdown">
+      <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Information <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        {% for item in site.information %}
+        <li><a href="{{item.url}}">{{item.title}}</a></li>
+        {% endfor %}
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Events <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        {% for events in site.events %}
+        <li><a href="{{events.url}}">{{events.title}}</a></li>
+        {% endfor %}
+      </ul>
+    </li>
   </ul>
 </nav>

@@ -76,10 +76,6 @@
         }
     }
 }
- .gsr-fixed-nav {
-        position: fixed;
-        margin-top: 0;
-    }
 
 .offcanvas-nav-toggle {
     position: fixed;
@@ -89,8 +85,8 @@
     line-height: 24px;
     top: 0px;
     right: 0px;
-    border: solid 2px #fff;
-    border-radius: 4px;
+    border: 2px solid #fff;
+    border-radius: 1px;
     color: #fff;
 
     &:hover {
@@ -107,10 +103,30 @@
     left: -($width + 10px);
     transition: left 500ms;
     will-change: left;
-    background-color: #fff;
     box-shadow: 0 5px 5px rgba(0,0,0,0.5);
     z-index: 1040;
     &.in {
         left: 0;
+    }
+    li {
+        min-height: 44px;
+        line-height: 44px;
+        valign: middle;
+        width: 100%;
+        padding: 0;
+        a {
+        font-family: 'Palanquin', sans-serif;
+        font-size: 1.25em;
+        color: #fff;
+        }
+        .dropdown-menu {
+            position: relative;
+            width: 100%;
+            min-width: 100%;
+            background: rgba(0,0,0,0);
+            margin-bottom: 10px;
+            box-shadow: none;
+            border: none;
+        }
     }
 }
