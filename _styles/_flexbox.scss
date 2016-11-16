@@ -1,4 +1,3 @@
-//merit badge display
 @mixin gsr-flex-container() {
     -webkit-display: flex;
     display: flex;
@@ -7,7 +6,7 @@
     -webkit-justify-content: center;
     justify-content: center;
 }
-
+//merit badge display
 .gsr-flex-container {
     @include gsr-flex-container();
 }

@@ -76,7 +76,10 @@
         }
     }
 }
-
+.gsr-fixed-nav {
+        position: fixed;
+        margin-top: 0;
+    }
 .offcanvas-nav-toggle {
     position: fixed;
     margin: 10px;

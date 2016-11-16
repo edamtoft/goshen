@@ -5,9 +5,34 @@ theme: basic
 image: /assets/Hero_Registration.jpg
 imagePosition: center 60%
 category: Registration
+aboutImage: /assets/Register01.jpg
+tagline: All the information you need to sign up for camp.
+contents:
+    - name: Quick Facts
+      link: "#quick-facts"
+    - name: Schedule &amp; Availability
+      link: "#sched-avail"
+    - name: Register Now
+      link: "#register"
+    - name: Camp Costs
+      link: "#fees"
+    - name: Camperships
+      link: "#camperships"
 ---
+<style>
+    .fa-stack i:first-child {
+        color: #212C48;
+    }
+    .gsr-flex-item {
+        background-color: transparent;
+    }
+    a.haunter-button {
+        border: 2px solid #6B482B;
+        color: #212C48;
+    }
+</style>
 {% include aboutSection-ConAnn.html %}
-<section class="row scheme2">
+<section class="row scheme2" id="quick-facts">
     <div class="col-md-8 col-md-offset-2">
         <h2 class="gsrtitleC text-center">Quick Facts</h2>
         <div class="col-sm-3">
@@ -96,11 +121,51 @@ category: Registration
         </div>
     </div>
 </section>
-<section class="row scheme5">
+<section class="row scheme5" id="sched-avail">
     <div class="col-md-8 col-md-offset-2">
         <h2 class="gsrtitleC text-center">2017 Schedule &amp; Availability</h2>
         <p>Availability (below) indicates if new units are able to register for a specific week of camp. If your unit has already reserved a week at camp then your Goshen coordinator will be able to add campers as space allows.</p>
-        {% assign availability = site.data.availability %}
+        <table class="mainSchedTable">
+            <thead>
+                <tr>
+                    <th></th>
+                    <td>Camp Bowman</td>
+                    <td>Camp Marriott</td>
+                    <td>Camp Olmsted</td>
+                    <td>Camp PMI</td>
+                    <td>Camp Ross</td>
+                    <td>Lenhok'sin</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for week in site.data.schedAvailv2 %}
+                <tr>
+                    <th>{{week.name}}</th>
+                    {% for camp in week.camps %}
+                    <td>{{camp.dates}}<br/>
+                        {% if camp.title != null %}
+                        {{camp.title}}<br/>
+                        {% endif %}
+                        {{camp.avail}}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <table class="mainSchedTableHeader">
+            <thead>
+                <tr>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for camp in site.data.schedAvail %}
+                <tr>
+                    <th>{{camp.Name}}</th>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
         <table class="mainSchedTable">
             <thead>
                 <tr>
@@ -114,35 +179,54 @@ category: Registration
                 </tr>
             </thead>
             <tbody>
+                {% for camp in site.data.schedAvail %}
                 <tr>
-                    <th>Camp Bowman</th>
-                    <td>6/17-6/24<br/>Open</td>
-                    <td>6/24-7/1<br/>Open</td>
-                    <td>7/1-7/8<br/>Open</td>
-                    <td>7/8-7/15<br/>Open</td>
-                    <td>7/15-7/22<br/>Open</td>
-                    <td>7/22-7/29<br/>Open</td>
-                </tr>
-                {% for week in schedule %}
-                <tr>
-                    <th>{{camp.camp}}</th>
-                    <td>{{camp.week1}}</td>
-                    <td>{{camp.week2}}</td>
-                    <td>{{camp.week3}}</td>
+                    <th>{{camp.Name}}</th>
+                    {% for week in camp.Weeks %}
+                    <td>{{week.dates}}<br/>
+                        {% if week.title != null %}
+                        {{week.title}}<br/>
+                        {% endif %}
+                        {{week.avail}}</td>
+                    {% endfor %}
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
+        </div>
+</section>
+<section class="row scheme2" id="register">
+    <h2 class="gsrtitleC text-center">Register Now</h2>
+    <div class="gsr-flex-container">
+        <div class="gsr-flex-item text-center">
+            <a href="#" class="haunter-button text-center">Register for<br/>Camp Bowman</a>
+            <p>Standard Boy Scout Program or Venturing Program</p>
+        </div>
+        <div class="gsr-flex-item text-center">
+            <a href="#" class="haunter-button text-center">Register for<br/>Camp Marriott</a>
+            <p>Standard Boy Scout Program, Provisional Program, LDS Week, or Specialty Week</p>
+        </div>
+        <div class="gsr-flex-item text-center">
+            <a href="#" class="haunter-button text-center">Register for<br/>Camp Olmsted</a>
+            <p>Standard Boy Scout Program</p>
+        </div>
+        <div class="gsr-flex-item text-center">
+            <a href="#" class="haunter-button text-center">Register for<br/>PMI</a>
+            <p>Webelos Program and Arrow of Light Program</p>
+        </div>
+        <div class="gsr-flex-item text-center">
+            <a href="#" class="haunter-button text-center">Register for<br/>Camp Ross</a>
+            <p>Webelos Program and Arrow of Light Program</p>
+        </div>
+        <div class="gsr-flex-item text-center">
+            <a href="#" class="haunter-button text-center">Register for<br/>Lenhok'sin</a>
+            <p>Backpacking or Canoe High Adventure Trek</p>
+        </div>
     </div>
 </section>
-<div class="row scheme2">
+<section class="row scheme1" id="fees">
     <div class="col-md-8 col-md-offset-2">
-        <h2 class="gsrtitleC text-center">Register Now</h2>
-    </div>
-</div>
-<div class="row" style="background-color: #3A5A5B; color: #fff;">
-    <div class="col-md-8 col-md-offset-2">
-        <h2 class="gsrtitle4 text-center">Camp Costs</h2>
+        <h2 class="gsrtitleC text-center">Camp Costs</h2>
         <table class="gsrTable-dark">
             <thead>
                 <tr>
@@ -191,10 +275,10 @@ category: Registration
             </tbody>
         </table>
     </div>
-</div>
-<div class="row" style="background-color: #CFD6D6;">
+</section>
+<section class="row scheme2" id="camperships">
     <div class="col-md-8 col-md-offset-2">
-        <h2 class="gsrtitle3 text-center">Camperships</h2>
+        <h2 class="gsrtitleC text-center">Camperships</h2>
         <div class="col-sm-6">
             <p>All Campership requests for Goshen Scout Reservation are due at the Council Service Center by February 1 of each year. The Campership Committee will convene and make award designations. Requests received after the due date will only be considered if funds are still available. If you plan on applying for a campership for a youth, please DO NOT pay the full amount right away. Voucher codes will be sent out after camperships are awarded.</p>
         </div>
@@ -204,4 +288,4 @@ category: Registration
             <p><a href="#" target="_blank">Document Name [docType] (file size)</a></p>
         </div>
     </div>
-</div>
+</section>

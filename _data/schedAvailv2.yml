@@ -1,0 +1,29 @@
+- name: Week 1
+  camps:
+    - dates: 6/17-6/24
+      avail: Open
+    - dates: 6/19-6/24
+      title: LDS Week
+      avail: Open
+    - dates: 6/18-6/24
+      avail: Open
+    - dates: 6/18-6/24
+      avail: Open
+    - dates: 6/18-6/24
+      avail: Open
+    - dates: 6/18-6/24
+      avail: Open
+- name: Week 2
+  camps:
+    - dates: 6/24-7/1
+      avail: Open
+    - dates: 6/24-7/1
+      avail: Open
+    - dates: 6/25-7/1
+      avail: Open
+    - dates: 6/25-7/1
+      avail: Open
+    - dates: 6/25-7/1
+      avail: Open
+    - dates: 6/25-7/1
+      avail: Open
