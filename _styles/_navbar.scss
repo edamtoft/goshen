@@ -76,10 +76,27 @@
         }
     }
 }
+@media (max-width: 992px) {
+    .gsr-navbar {
+        height: 0px;
+        transition: height 2s;
+    }
+}
+.hamburger-logo {
+    position: fixed;
+    top: 0;
+    margin: 10px;
+}
 .gsr-fixed-nav {
         position: fixed;
         margin-top: 0;
+}
+@media (max-width: 992px) {
+    .gsr-fixed-nav {
+        height: 75px;
+        transition: height 2s;
     }
+}
 .offcanvas-nav-toggle {
     position: fixed;
     margin: 10px;
@@ -98,7 +115,7 @@
 }
 
 .offcanvas-nav {
-    $width: 300px;
+    $width: 280px;
     top: 0;
     position: fixed;
     height: 100%;
@@ -118,9 +135,12 @@
         width: 100%;
         padding: 0;
         a {
-        font-family: 'Palanquin', sans-serif;
-        font-size: 1.25em;
-        color: #fff;
+            font-family: 'Palanquin', sans-serif;
+            font-size: 1.25em;
+            color: #fff;
+            &:hover, &:focus, &:active {
+                background-color: transparent;
+            }
         }
         .dropdown-menu {
             position: relative;

@@ -113,6 +113,11 @@
     .gsr-nav-main {
         @include gsrnavbg($navbarbg);
         }
+    @media (max-width: 992px) {
+        .gsr-fixed-nav {
+            background: linear-gradient(to right, $navbarbg, lighten($navbarbg,15%));
+        }
+    }
     .offcanvas-nav {
         background-color: $navbarbg;
         a {
