@@ -97,6 +97,16 @@
         .highlight1 {
             color: $highcolor-2;
         }
+        .button-scheme {
+            border-color: $highcolor-2;
+            color: $fontcolor-1;
+            background-color: $highcolor-2;
+            &:hover, &:focus, &:active {
+                border-color: $fontcolor-3;
+                color: $highcolor-2;
+                background-color: $fontcolor-3;
+            }
+        }
         .gsrDataTable {color: $fontcolor-3}
         .gsrDataTable thead {background-color: $bgcolor-1; color: $fontcolor-1;}
         .gsrDataTable tr:nth-child(even) {background-color: $bgcolor-2; color: $fontcolor-2;}
