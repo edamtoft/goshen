@@ -1,0 +1,41 @@
+.gallery {
+  background-color: #000;
+
+  // .gallery-video {
+  // }
+
+  .gallery-controls {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #000;
+
+    .gallery-navigation {
+      display: flex;
+      width: 48px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .gallery-row {
+      flex-grow: 1;
+
+      .gallery-set {
+        >a {
+          text-decoration: none;
+          width: 25%;
+          display: block;
+          float: left;
+          >img {
+            display: block;
+            max-width: 100%;
+          }
+        }
+        // >a {
+        //   display: inline-flex;
+        // }
+      }
+    }
+  }
+}
