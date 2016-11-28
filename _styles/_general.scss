@@ -12,40 +12,23 @@ h4 {
     font-family: 'Palanquin', sans-serif !important;
 }
 
-//title underline series
-.gsrtitle::after {
-    content: '';
-    width: 45px;
-    height: 2px;
-    background-color: #2F384C;
-    display: block;
-    margin-top: 24px;
+.anchor-buffer {
+    display: block; 
+    height: 60px; 
+    margin-top: -60px; 
+    visibility: hidden;
 }
-.gsrtitle2::after {
-    content: '';
-    width: 45px;
-    height: 2px;
-    background-color: #2F384C;
-    display: block;
-    margin-top: 36px;
-    margin-left: 60px;
+/*.picture-divider {
+    height: 150px;
+    background-position: center; 
+    background-attachment: fixed; 
+    background-size: cover;
 }
-.gsrtitle3::after {
-    content: '';
-    width: 45px;
-    height: 2px;
-    background-color: #2F384C;
-    display: block;
-    margin: 20px auto;
-}
-.gsrtitle4::after {
-    content: '';
-    width: 45px;
-    height: 2px;
-    background-color: #fff;
-    display: block;
-    margin: 20px auto;
-}
+@media mobile {
+    .picture-divider {
+        background-attachment: 
+    }
+}*/
 
 .gsrAbout img { 
     width: 300px;

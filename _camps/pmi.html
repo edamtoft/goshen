@@ -10,6 +10,19 @@ aboutImage: /assets/pmi01.jpg
 tagline: A premier Scout camp that offers programs for all Webelos.
 aboutText: "Camp PMI is one of two Webelos Camps. Camp PMI is situated at the foot of the Viewing Rock Trail, which leads to one of the most amazing views on the Eastern seaboard. Additionally, Camp PMI provides programming in aquatics, scoutcraft, bbs, archery, ecology and handicraft. The staff works very hard to ensure that Webelos have a great time both summers they come to Goshen and have instituted a stellar Second-Year program."
 CTA: Learn more below!
+contents:
+    - name: Program
+      link: "#program"
+    - name: Contact
+      link: "#contact"
+    - name: Be Staff
+      link: "#staff"
+    - name: Registration
+      link: "#registration"
+    - name: Downloads
+      link: "#downloads"
+    - name: How to Get There
+      link: "#transportation"
 campDirectorPicture: /assets/cd_pmi01.jpg
 campDirectorName: Patrick O'Connor
 campDirectorBio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut sollicitudin lectus, sodales posuere odio. Nam vehicula convallis nisi quis dictum. Suspendisse rutrum est nunc, in pharetra leo consectetur ut. Sed congue porttitor fermentum.
@@ -18,7 +31,25 @@ campFacebook:
 campContactPicture: /assets/staff_pmi01.jpg
 unitTypes: Pack
 ---
-<div id="program" class="row scheme2">
+<style>
+body:before {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background: url({{page.image}}) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+</style>
+<span class="anchor-buffer" id="program"></span>
+<section id="program" class="row scheme2">
     <div class="col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
         <h2 class="gsrtitleC text-center">PMI's Program</h2>
         <div class="col-sm-4 col-sm-push-8" style="background-image: url('/assets/pmi02.jpg'); min-height: 300px; background-size: cover; background-position: center center; margin-bottom: 15px;">
@@ -27,6 +58,6 @@ unitTypes: Pack
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut sollicitudin lectus, sodales posuere odio. Nam vehicula convallis nisi quis dictum. Suspendisse rutrum est nunc, in pharetra leo consectetur ut. Sed congue porttitor fermentum. Curabitur commodo ultricies ligula, a porta nisl imperdiet ut. Donec sit amet nisl at tortor rutrum feugiat. Nullam odio urna, consequat eget nisl et, dignissim aliquet nisi. Duis eleifend dictum sapien non tincidunt. </p>
         </div>
     </div>
-</div>
-<div class="row" style="height: 150px; background-image: url({{page.image}}); background-position: center; background-attachment: fixed; background-size: cover;">
+</section>
+<div class="row picture-divider" style="height:150px;">
 </div>
