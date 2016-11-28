@@ -9,7 +9,9 @@
           <li class="multi-dropdown">
             <ul>
               {% for camp in site.camps %}
-              <li><a href="{{camp.url}}">{{camp.title}}</a></li>
+                {% if camp.url != "/camps/lenhoksin.html" %}
+                  <li><a href="{{camp.url}}">{{camp.title}}</a></li>
+                {% endif %}
               {% endfor %}
             </ul>
           </li>
@@ -20,7 +22,7 @@
               {% endfor %}
             </ul>
           </li>
-          <li><a href="/lenhoksin.html">Lenhok'sin High Adventure</a></li>
+          <li><a href="/camps/lenhoksin.html">Lenhok'sin High Adventure</a></li>
         </ul>
       </li>
       <li style="width: 10%;"><a href="/"><img class="logo" src="/assets/logo.png"></a></li>

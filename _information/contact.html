@@ -54,6 +54,9 @@ imagePosition: center 15%
     <div class="col-md-8 col-md-offset-2">
         <h2 class="gsrtitleC text-center">Individual Camps</h2>
         {% for camp in site.camps %}
+            {% if camp.campName == "Lenhok'sin High Adventure" %}
+                {% continue %}
+            {% endif %}
             <div class="col-md-4">
                 <h3 class="gsrtitleL">{{camp.campName}}</h3>
                 <p><b>Camp Director:</b> {{camp.campDirectorName}}</p>
@@ -61,6 +64,17 @@ imagePosition: center 15%
                 <p><b>Phone (summer only):</b> {{camp.campPhone}}</p>
                 <p><b>Facebook:</b> <a href="{{camp.campFacebook}}" target="_blank"><span style="word-wrap: break-word;">{{camp.campFacebook}}</span></a></p>
             </div>
+        {% endfor %}
+        {% for camp in site.camps %}
+            {% if camp.campName == "Lenhok'sin High Adventure" %}
+            <div class="col-md-4">
+                <h3 class="gsrtitleL">{{camp.campName}}</h3>
+                <p><b>Camp Director:</b> {{camp.campDirectorName}}</p>
+                <p><b>Email:</b> <a href="mailto: {{camp.campEmail}}">{{camp.campEmail}}</a></p>
+                <p><b>Phone (summer only):</b> {{camp.campPhone}}</p>
+                <p><b>Facebook:</b> <a href="{{camp.campFacebook}}" target="_blank"><span style="word-wrap: break-word;">{{camp.campFacebook}}</span></a></p>
+            </div>
+            {% endif %}
         {% endfor %}
     </div>
 </div>
