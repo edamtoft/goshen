@@ -75,6 +75,16 @@
         .gsrtitleC::after {
             @include gsrtitleC($highcolor-2);
         }
+        .button-scheme {
+            border-color: $highcolor-2;
+            color: $fontcolor-1;
+            background-color: $highcolor-2;
+            &:hover, &:focus, &:active {
+                border-color: $fontcolor-2;
+                color: $highcolor-2;
+                background-color: $fontcolor-2;
+            }
+        }
         .osp-flex-item {
             border-right: 0.5px solid $fontcolor-1;
         }

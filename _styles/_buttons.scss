@@ -5,6 +5,7 @@
     border-radius: 2px;
     outline: none;
     text-decoration: none;
+    text-align: center;
 }
 
 a.ghastly-button {
@@ -63,6 +64,24 @@ a.marowak-button {
     font-size: 1.25em;
     font-family: 'Palanquin', sans-serif;
     &:hover, &:active, &:focus {
+        transition: 0.3s ease-in;
+    }
+}
+a.porygon-button {
+    @extend .gsr-button;
+    width: 200px;
+    color: #212C48;
+    border: 2px solid #6B482B;
+    transition: 0.2s ease-out;
+    background-color: transparent;
+    z-index: 950;
+    font-size: 1.25em;
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 700;
+    &:hover, &:active, &:focus {
+        border-color: #212C48;
+        background-color: #212C48;
+        color: #fff;
         transition: 0.3s ease-in;
     }
 }
