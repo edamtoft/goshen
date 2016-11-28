@@ -56,6 +56,16 @@
         .gsrtitleC::after, .override.gsrtitleC::after {
             @include gsrtitleC($highcolor-1);
         }
+        .button-scheme {
+            border-color: $highcolor-1;
+            color: $fontcolor-2;
+            background-color: $highcolor-1;
+            &:hover, &:focus, &:active {
+                border-color: $fontcolor-1;
+                color: $highcolor-1;
+                background-color: $fontcolor-1;
+            }
+        }
         .gsrContents a {
             color: $highcolor-1;
             &:active, &:hover, &:focus {
