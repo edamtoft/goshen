@@ -26,22 +26,13 @@
     .gsr-flex-item {width: 100%;}
 }
 //camp post program and older scout program display
-#ospSection {
-    margin-top: 6%;
-}
-@media (max-width: 991px) {
-    #ospSection {
-        margin-top: 0;
-    }
-}
+
 .osp-flex-container {
     @include gsr-flex-container();
-    margin-top: -6%;
 }
 @media (max-width: 991px) {
     .osp-flex-container {
         padding: 0;
-        margin-top: 0;
     }
 }
 .osp-flex-item {

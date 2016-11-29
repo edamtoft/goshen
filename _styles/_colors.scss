@@ -36,6 +36,14 @@
     display: block;
     margin: 20px auto;
 }
+@function set-button-text-color($color) {
+    @if (lightness( $color ) > 50) {
+      @return #000000;
+    }
+    @else {
+      @return #FFFFFF;
+    }
+}
 @mixin theme(
     $bgcolor-1,
     $bgcolor-2,
@@ -58,7 +66,7 @@
         }
         .button-scheme {
             border-color: $highcolor-1;
-            color: $fontcolor-2;
+            color: set-button-text-color($highcolor-1);
             background-color: $highcolor-1;
             &:hover, &:focus, &:active {
                 border-color: $fontcolor-1;
@@ -73,7 +81,7 @@
             }
         }
         .gsrFeeTable {color: $fontcolor-1;}
-        .gsrFeeTable thead tr {background-color: $highcolor-1; color: $fontcolor-1;}
+        .gsrFeeTable thead tr {background-color: $highcolor-1; color: set-button-text-color($highcolor-1);}
         .gsrFeeTable tbody tr {border-bottom: 1px solid $highcolor-1;}
     }
     .scheme2 {
@@ -87,7 +95,7 @@
         }
         .button-scheme {
             border-color: $highcolor-2;
-            color: $fontcolor-1;
+            color: set-button-text-color($highcolor-2);
             background-color: $highcolor-2;
             &:hover, &:focus, &:active {
                 border-color: $fontcolor-2;
@@ -119,7 +127,7 @@
         }
         .button-scheme {
             border-color: $highcolor-2;
-            color: $fontcolor-1;
+            color: set-button-text-color($highcolor-2);
             background-color: $highcolor-2;
             &:hover, &:focus, &:active {
                 border-color: $fontcolor-3;

@@ -6,7 +6,10 @@
             <p><b>Email:</b> <a href="mailto: {{page.campEmail}}">{{page.campEmail}}</a></p>
             <p><b>Phone (summer only):</b> {{page.campPhone}}</p>
             <h3 class="gsrtitleL" style="margin-top: 50px;">Find us on Social Media</h3>
-            <p><b>Facebook:</b> <a href="{{page.campFacebook}}">{{page.campFacebook}}</a></p> 
+            <p style="word-break: break-all;"><b>Facebook:</b> <a href="{{page.campFacebook}}">{{page.campFacebook}}</a></p>
+            {% if page.campInstagram!='' %}
+            <p><b>Instagram:</b> <a href="{{page.campInstagram}}">{{page.campInstagram}}</a></p>
+            {% endif %} 
             <h3 class="gsrtitleL" style="margin-top: 50px;">Sending Mail</h3>
             <p>To send mail to a camper, please use the following format:</p>
             <p>Recipient’s name, {{page.unitTypes}} #<br/>
