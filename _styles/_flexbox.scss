@@ -42,7 +42,7 @@
     padding: 0 15px 100px 15px;
 }
 .osp-flex-item:last-child {
-    border: none;
+    border: none !important;
     padding-top: 50px;
 }
 .osp-flex-item:first-child {
@@ -53,6 +53,7 @@
         width: 100%;
         flex: auto;
         padding-bottom: 50px;
+        border: none !important;
     }
 }
 .osp-flip-img {

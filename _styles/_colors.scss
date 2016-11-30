@@ -75,7 +75,7 @@
             }
         }
         .gsrContents a {
-            color: $highcolor-1;
+            color: $fontcolor-1;
             &:active, &:hover, &:focus {
                 color: $fontcolor-1;
             }
@@ -83,6 +83,15 @@
         .gsrFeeTable {color: $fontcolor-1;}
         .gsrFeeTable thead tr {background-color: $highcolor-1; color: set-button-text-color($highcolor-1);}
         .gsrFeeTable tbody tr {border-bottom: 1px solid $highcolor-1;}
+        .gsrDataTable {color: $fontcolor-1}
+        .gsrDataTable thead {background-color: $bgcolor-2; color: $fontcolor-2;}
+        .gsrDataTable tr:nth-child(even) {background-color: $bgcolor-3; color: $fontcolor-3;}
+        .gsrDataTable a {
+            color: inherit;
+            &:hover {
+                color: $highcolor-2;
+            }
+        }
     }
     .scheme2 {
         background-color: $bgcolor-2;

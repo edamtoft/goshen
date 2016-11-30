@@ -1,36 +1,37 @@
+{% if page.specialProgramReference %}{% assign ref = site.camps[page.specialProgramReference] %}{% else %}{% assign ref = page %}{% endif %}
 <span class="anchor-buffer" id="contact"></span>
 <section class="row scheme2" id="contact">
     <div class="col-lg-push-3 col-lg-9" style="padding: 3%;">
         <h2 class="gsrtitleL" style="margin: 15px;">Contact Us</h2>
         <div class="col-sm-5">
-            <p><b>Email:</b> <a href="mailto: {{page.campEmail}}">{{page.campEmail}}</a></p>
-            <p><b>Phone (summer only):</b> {{page.campPhone}}</p>
+            <p><b>Email:</b> <a href="mailto: {{ref.campEmail}}">{{ref.campEmail}}</a></p>
+            <p><b>Phone (summer only):</b> {{ref.campPhone}}</p>
             <h3 class="gsrtitleL" style="margin-top: 50px;">Find us on Social Media</h3>
-            <p style="word-break: break-all;"><b>Facebook:</b> <a href="{{page.campFacebook}}">{{page.campFacebook}}</a></p>
-            {% if page.campInstagram!='' %}
-            <p><b>Instagram:</b> <a href="{{page.campInstagram}}">{{page.campInstagram}}</a></p>
+            <p style="word-break: break-all;"><b>Facebook:</b> <a href="{{ref.campFacebook}}">{{ref.campFacebook}}</a></p>
+            {% if ref.campInstagram %}
+            <p><b>Instagram:</b> <a href="{{ref.campInstagram}}">{{ref.campInstagram}}</a></p>
             {% endif %} 
             <h3 class="gsrtitleL" style="margin-top: 50px;">Sending Mail</h3>
             <p>To send mail to a camper, please use the following format:</p>
-            <p>Recipient’s name, {{page.unitTypes}} #<br/>
-            {{page.campName}}<br/>
+            <p>Recipient’s name, {{ref.unitTypes}} #<br/>
+            {{ref.campName}}<br/>
             Goshen Scout Reservation<br/>
             340 Millard Burke Memorial Hwy<br/>
             Goshen, VA 24439</p>
         </div>
         <div id="staff-pic" class="col-sm-7 text-center">
-            <img src="{{page.campContactPicture}}" class="img-responsive" style="margin: 0 auto;">
+            <img src="{{ref.campContactPicture}}" class="img-responsive" style="margin: 0 auto;">
         </div>
     </div>
     <div class="col-lg-pull-9 col-lg-3" style="padding: 3%;">
         <div class="col-xs-12  scheme1" style="text-align: center; margin: 20px 0;">
             <h2 class="override gsrtitleC">Meet Your<br class="hidden-sm hidden-xs"/> 2016 Camp Director</h2>
             <div class="col-xs-12 col-sm-4 col-lg-12">
-                <img src="{{page.campDirectorPicture}}" class="img-responsive img-circle" style="width: 75%; margin: 15px auto; display: block;" />
+                <img src="{{ref.campDirectorPicture}}" class="img-responsive img-circle" style="width: 75%; margin: 15px auto; display: block;" />
             </div>
             <div class="col-xs-12 col-sm-8 col-lg-12">
-                <h3 class="CDbio">{{page.campDirectorName}}</h3>
-                <p class="CDbio">{{page.campDirectorBio}}</p>
+                <h3 class="CDbio">{{ref.campDirectorName}}</h3>
+                <p class="CDbio">{{ref.campDirectorBio}}</p>
             </div>
         </div>
     </div>

@@ -1,4 +1,4 @@
-<aside class="col-sm-5 col-sm-push-7 col-md-3 col-md-push-9 gsrPageAnnouncements scheme3">
+<aside class="col-xs-12 col-sm-5 col-sm-push-7 col-md-3 col-md-push-9 gsrPageAnnouncements scheme3">
     <h2 class="announcementsTitle">Latest News</h2>
         {% assign posts = site.posts | where_exp: "cat", "page.category contains cat.category" %}
         {% for post in posts limit:3 %}

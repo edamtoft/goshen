@@ -16,6 +16,7 @@
 .gsrContents a {
     font-size: 1.2em;
     line-height: 48px;
+    font-weight: 550;
 }
 
 .gsrPageAnnouncements {
@@ -38,11 +39,18 @@ a.announcementTitle {
         margin-top: -74px;
     }
 }
-
+.transport-section {
+    background-size: cover; 
+    background-position: center center;
+}
 .transport-section-inner {
    margin-top: 50px;
+   margin-bottom: 50px;
 }
 @media (max-width: 767px) {
+    .transport-section {
+        background: none !important;
+    }
     .transport-section-inner {
         margin-top: 0;
     }
