@@ -280,14 +280,14 @@
 }
 #lha {
     @include theme(
-        #0e0e0e, //bgcolor-1
-        #fff, //bgcolor-2
-        #AC9898, //bgcolor-3
-        #D40006, //highcolor-1
-        #D40006, //highcolor-2
+        #615438, //bgcolor-1
+        #b1afd9, //bgcolor-2
+        #002100, //bgcolor-3
+        #368c36, //highcolor-1
+        #5f7ec6, //highcolor-2
         #fff, //fontcolor-1
         #0e0e0e, //fontcolor-2
-        #0e0e0e, //fontcolor-3
-        #1e0001 //navbarbg
+        #fff, //fontcolor-3
+        #292214 //navbarbg
     )
 }
