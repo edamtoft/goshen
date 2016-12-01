@@ -70,3 +70,7 @@
 .gsrFeeTable thead {font-family: 'Palanquin', sans-serif; font-size: 1.25em;}
 .gsrFeeTable td {padding: 10px; text-align: center;}
 
+// override for responsive-table
+.pinned, .scrollable, .table-wrapper {
+    border: none;
+}

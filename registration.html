@@ -121,48 +121,7 @@ contents:
     <div class="col-md-8 col-md-offset-2">
         <h2 class="gsrtitleC text-center">2017 Schedule &amp; Availability</h2>
         <p>Availability (below) indicates if new units are able to register for a specific week of camp. If your unit has already reserved a week at camp then your Goshen coordinator will be able to add campers as space allows.</p>
-        <table class="mainSchedTable">
-            <thead>
-                <tr>
-                    <th></th>
-                    <td>Camp Bowman</td>
-                    <td>Camp Marriott</td>
-                    <td>Camp Olmsted</td>
-                    <td>Camp PMI</td>
-                    <td>Camp Ross</td>
-                    <td>Lenhok'sin</td>
-                </tr>
-            </thead>
-            <tbody>
-                {% for week in site.data.schedAvailv2 %}
-                <tr>
-                    <th>{{week.name}}</th>
-                    {% for camp in week.camps %}
-                    <td>{{camp.dates}}<br/>
-                        {% if camp.title != null %}
-                        {{camp.title}}<br/>
-                        {% endif %}
-                        {{camp.avail}}</td>
-                    {% endfor %}
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-        <table class="mainSchedTableHeader">
-            <thead>
-                <tr>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for camp in site.data.schedAvail %}
-                <tr>
-                    <th>{{camp.Name}}</th>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-        <table class="mainSchedTable">
+        <table class="mainSchedTable responsive">
             <thead>
                 <tr>
                     <th></th>
@@ -175,7 +134,7 @@ contents:
                 </tr>
             </thead>
             <tbody>
-                {% for camp in site.data.schedAvail %}
+                {% for camp in site.data.schedule %}
                 <tr>
                     <th>{{camp.Name}}</th>
                     {% for week in camp.Weeks %}

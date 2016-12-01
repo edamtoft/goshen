@@ -4,26 +4,30 @@
         <div class="reg-flex-item scheme2">
             <div class="col-sm-8 col-md-offset-4 col-sm-offset-2">
                 <h2 class="gsrtitleL">2017 Summer Schedule</h2>
-                {% assign availability = site.data.availability | where:"camp",page.campName %}
+                {% assign camps = site.data.schedule | where:"Id",page.campId %}
+                {% assign camp = camps[0] %}
                 <table class="schedTable">
                     <thead>
                         <tr>
-                            {% for week in availability %}
-                            <td>{{week.title}}</td>
+                            {% for week in camp.Weeks %}
+                            {% if page.week == nil or page.week == forloop.index + 1 %}
+                            <td>Week {{ forloop.index }}
+                                {% if week.title != null %}
+                                <br>{{week.title}}
+                                {% endif %}
+                            </td>
+                            {% endif %}
                             {% endfor %}
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            {% for week in availability %}{% if week.status contains "Open" or "open" %}
-                            <td class="availability-open">{{week.dates}}<br>{{week.status}}</td>
-                            {% elsif week.status contains "Closed" or "closed" %}
-                            <td class="availability-closed">{{week.dates}}<br>{{week.status}}</td>
-                            {% elsif week.status contains "Filling" or "filling" %}
-                            <td class="availability-filling">{{week.dates}}<br>{{week.status}}</td>
-                            {% else %}
-                            <td class="availability-unknown">{{week.dates}}<br>{{week.status}}</td>
-                            {% endif %}{% endfor %}
+                            {% for week in camp.Weeks %}
+                            {% if page.week == nil or page.week == forloop.index + 1 %}
+                            <td>{{week.dates}}<br/>
+                                {{week.avail}}</td>
+                            {% endif %}
+                            {% endfor %}
                         </tr>
                     </tbody>
                 </table>

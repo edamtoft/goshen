@@ -1,4 +1,5 @@
 - Name: Camp Bowman
+  Id: BOW
   Weeks:
     - dates: 6/17-6/24
       avail: Open
@@ -13,6 +14,7 @@
     - dates: 7/22-7/29
       avail: Open
 - Name: Camp Marriott
+  Id: MAR
   Weeks:
     - dates: 6/19-6/24
       title: LDS Week
@@ -29,6 +31,7 @@
       title: Specialty Week
       avail: Open
 - Name: Camp Olmsted
+  Id: OLM
   Weeks:
     - dates: 6/18-6/24
       avail: Open
@@ -43,6 +46,7 @@
     - dates: 7/23-7/29
       avail: Open
 - Name: Camp PMI
+  Id: PMI
   Weeks:
     - dates: 6/18-6/24
       avail: Open
@@ -57,6 +61,7 @@
     - dates: 7/23-7/29
       avail: Open
 - Name: Camp Ross
+  Id: ROS
   Weeks:
     - dates: 6/18-6/24
       avail: Open
@@ -71,6 +76,7 @@
     - dates: 7/23-7/29
       avail: Open
 - Name: Lenhok'sin
+  Id: LHA
   Weeks:
     - dates: 6/18-6/24
       avail: Open

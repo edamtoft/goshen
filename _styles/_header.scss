@@ -1,14 +1,24 @@
+// defaults: small screens
 .gsrMainTitle {
-    font-size: 64px;
+    font-size: 40px;
     line-height: 70px;
     font-family: "Palanquin Dark",sans-serif;
     text-transform: uppercase;
     color: #fff;
     text-align: center;
-    margin: 15% 0 0;
+    margin: 30% 0 0;
 }
-@media (max-width: 992px) {
+
+// Tablets and up: increace font size
+@media (min-width: 768) {
     .gsrMainTitle {
-        margin: 30% 0 0;
+        font-size: 64px;
+    }
+}
+
+// Medium devices: change margin
+@media (min-width: 992px) {
+    .gsrMainTitle {
+        margin: 15% 0 0;
     }
 }
