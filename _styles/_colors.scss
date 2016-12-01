@@ -115,6 +115,10 @@
         .osp-flex-item {
             border-right: 0.5px solid $fontcolor-1;
         }
+        .gsrTable-solid tbody tr td {
+            background-color: $highcolor-2;
+            color: set-button-text-color($highcolor-2);
+        }
     }
     .scheme3 {
         background-color: $bgcolor-3;
@@ -290,4 +294,46 @@
         #fff, //fontcolor-3
         #292214 //navbarbg
     )
+}
+
+@mixin aboutColor($color) {
+    .comparisonHeader {
+        background-color: $color;
+        color: set-button-text-color($color);
+    }
+    .comparisonHeader h4:first-child, .comparisonHeader h3 {
+        border-bottom: 1px ridge lighten($color, 10%); 
+        padding-bottom: 10px;
+    }
+    .about-button-scheme {
+        background-color: $color;
+        color: set-button-text-color($color);
+        &:hover, &:focus, &:active {
+            background-color: #fff;
+            color: $color;
+            transition: 0.3s ease-in;
+        }
+    }
+}
+
+#bow-about {
+    @include aboutColor(#021e14);
+}
+#mar-about {
+    @include aboutColor(#560012);
+}
+#olm-about {
+    @include aboutColor(#ffcc11);
+}
+#pmi-about {
+    @include aboutColor(#d40006);
+}
+#ross-about {
+    @include aboutColor(#2180ac);
+}
+#lha-about {
+    @include aboutColor(#615438);
+}
+#post-about {
+    @include aboutColor(#5d5656);
 }

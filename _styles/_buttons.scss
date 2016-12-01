@@ -45,15 +45,12 @@ a.haunter-button {
 }
 a.cubone-button {
     @extend .gsr-button;
+    @extend .about-button-scheme;
     width: 200px;
     border: 2px solid transparent;
     font-size: 1.25em;
     font-family: 'Palanquin', sans-serif;
-    transition: box-shadow 0.3s ease-out;
-    &:hover, &:active, &:focus {
-        box-shadow: 0.5px 0.5px 10px #fff;
-        transition: box-shadow 0.3s ease-in;
-    }
+    transition: 0.3s ease-out;
 }
 a.marowak-button {
     @extend .gsr-button;

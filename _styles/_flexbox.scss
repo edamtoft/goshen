@@ -11,7 +11,6 @@
     @include gsr-flex-container();
 }
 .gsr-flex-item {
-    background-color: #fff;
     margin: 15px;
     padding: 15px;
     width: 46%;
@@ -98,6 +97,47 @@
 }
 @media (max-width: 992px) {
     .reg-flex-item {
+        width: 100%;
+    }
+}
+//for lenhok'sin activities display
+.lha-flex-container {
+    @include gsr-flex-container();
+}
+.lha-flex-item {
+    padding: 15px;
+    width: 33%;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .lha-flex-item {
+        width: 50%;
+    }
+}
+@media (max-width: 767px) {
+    .lha-flex-item {
+        width: 100%;
+    }
+}
+.lha-flex-item img {
+    margin: 2%; 
+    max-height: 50%;
+    max-width: 100%;
+}
+//about displays
+.about-flex-container {
+    @include gsr-flex-container();
+}
+.about-flex-item {
+    padding: 15px;
+    width: 33%;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .about-flex-item {
+        width: 50%;
+    }
+}
+@media (max-width: 767px) {
+    .about-flex-item {
         width: 100%;
     }
 }
