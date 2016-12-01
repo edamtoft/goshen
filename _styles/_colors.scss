@@ -198,7 +198,7 @@
     );
     .scheme4 {
         background-color: #212C48;
-        font-color: #fff;
+        color: #fff;
         .gsrtitleL::after {
             @include gsrtitleL(#6B482B);
         }
@@ -208,12 +208,22 @@
     }
     .scheme5 {
         background-color: #fff;
-        font-color: #0e0e0e;
+        color: #0e0e0e;
         .gsrtitleL::after {
             @include gsrtitleL(#6B482B);
         }
         .gsrtitleC::after {
             @include gsrtitleC(#6B482B);
+        }
+        .button-scheme {
+            border-color: #212C48;
+            color: #fff;
+            background-color: #212C48;
+            &:hover, &:focus, &:active {
+                border-color: #CFD6D6;
+                color: #212C48;
+                background-color: #CFD6D6;
+            }
         }
     }
 }
@@ -319,8 +329,20 @@
 #bow-about {
     @include aboutColor(#021e14);
 }
+#vtr-about {
+    @include aboutColor(#228b22);
+}
 #mar-about {
     @include aboutColor(#560012);
+}
+#lds-about {
+    @include aboutColor(#6c193f);
+}
+#pvc-about {
+    @include aboutColor(#d21034);
+}
+#spw-about {
+    @include aboutColor(#ff5c00);
 }
 #olm-about {
     @include aboutColor(#ffcc11);
@@ -333,6 +355,9 @@
 }
 #lha-about {
     @include aboutColor(#615438);
+}
+#lha-about-2 {
+    @include aboutColor(#b1afd9);
 }
 #post-about {
     @include aboutColor(#5d5656);

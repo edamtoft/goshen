@@ -2,9 +2,11 @@
 <section class="row transport-section" style="background-image: url('https://maps.googleapis.com/maps/api/staticmap?center=37.971537,-79.448247&size=640x200&maptype=terrain&zoom=10&scale=2&key={{site.gmapKey}}'); padding-bottom: 0;">
     <div class="col-xs-12 col-sm-5 col-sm-offset-1 col-md-4 col-md-offset-1 scheme2 transport-section-inner">
         <h2 class="gsrtitleL">Transportation</h2>
-        <p>Units may take advantage of the Goshen bus system chartered by our local council.</p>
-        <p>Units can also drive.</p>
-        <p class="text-center"><a href="/information/transportation.html" class="marowak-button">Learn More</a></p>
+        {% if layout.transInfo %}
+            {{layout.transInfo | markdownify}}
+        {% else %}
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida est neque, at malesuada purus luctus ac. Proin posuere id libero non congue.</p>
+        {% endif %}
     </div>
     <img class="visible-xs-block" style="max-width: 100%;" src="https://maps.googleapis.com/maps/api/staticmap?center=37.971537,-79.448247&size=400x300&maptype=terrain&zoom=10&scale=2&key={{site.gmapKey}}" />
 </section>
