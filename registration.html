@@ -223,51 +223,22 @@ contents:
 <section class="row scheme1" id="fees">
     <div class="col-md-8 col-md-offset-2">
         <h2 class="gsrtitleC text-center">Camp Costs</h2>
-        <table class="gsrTable-dark">
-            <thead>
-                <tr>
-                    <th></th>
-                    <td>Price per Camper</td>
-                    <td>If paid by...</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>Early Discount Price<br/>(-$40)</th>
-                    <td>Youth: $360<br/>Adult: $225*</td>
-                    <td>April 14</td>
-                </tr>
-                <tr>
-                    <th>Regular Price</th>
-                    <td>Youth: $400<br/>Adult: $265*</td>
-                    <td>May 19</td>
-                </tr>
-                <tr>
-                    <th>Late Registration Price<br/>(+$40)</th>
-                    <td>Youth: $440<br/>Adult: $305*</td>
-                    <td>After May 19</td>
-                </tr>
-            </tbody>
-        </table>
-        <p class="text-center">*All units will receive <b>two free adult leaders</b> per unit!</p>
-        <p class="text-center"><b>Early Bird Fee Special!</b> All campers who are paid in full by the Early Discount Deadline will be eligible for the 2017 Goshen hat!</p>
+        {% include feesTable.html %}
         <h3>Other Fees</h3>
         <table class="gsrTable-dark">
             <thead>
                 <tr>
                     <td>Add-on Program</td>
-                    <td>Additional Fees (2016/2017)</td>
+                    <td>Additional Fees</td>
                 </tr>
             </thead>
             <tbody>
+                {% for program in site.data.fees.otherFees %}
                 <tr>
-                    <td>ATV Program</td>
-                    <td>$50/TBD</td>
+                    <td>{{program.label}}</td>
+                    <td>{% if fee.cost %}${{fee.cost}}{% else %}TBA{% endif %}</td>
                 </tr>
-                <tr>
-                    <td>Bus Transportation</td>
-                    <td>$45/TBD</td>
-                </tr>
+                {% endfor %}
             </tbody>
         </table>
     </div>

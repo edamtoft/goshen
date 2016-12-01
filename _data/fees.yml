@@ -1,0 +1,17 @@
+rates: 
+  - label: Early Discount Price
+    youth: 360
+    adult: 225
+    deadline: April 14
+  - label: Regular Price
+    youth: 400
+    adult: 265
+    deadline: May 19  
+  - label: Late Registration Price
+    youth: 440
+    adult: 305
+    deadline: After May 19
+otherFees:
+  - label: ATV Program
+  - label: Bus Transportation
+

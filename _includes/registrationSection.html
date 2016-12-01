@@ -33,35 +33,7 @@
         <div class="reg-flex-item scheme1">
             <div class="col-sm-8 col-md-offset-0 col-sm-offset-2" style="padding: 10px 15px;">
                 <h2 class="gsrtitleL">Registration Information</h2>
-                <table class="gsrFeeTable">
-                    <thead>
-                        <tr>
-                            <td>Payment</td>
-                            <td>Due Date</td>
-                            <td>Fees</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Early Bird</td>
-                            <td>April 15</td>
-                            <td>Youth: $360<br>Adult: $225</td>
-                        </tr>
-                        <tr>
-                            <td>Regular</td>
-                            <td>May 20</td>
-                            <td>Youth: $400<br>Adult: $265</td>
-                        </tr>
-                        <tr>
-                            <td>At Camp</td>
-                            <td>After May 20</td>
-                            <td>Youth: $440<br>Adult: $305</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p>*All units will receive <b>two free adult leaders</b> per unit!</p>
-                <p><b>Early Bird Special!</b> All who pay in full by the Early Bird Deadline will be eligible for the 2016 Goshen hat!</p>
-                <p>For more information about registration, including quick facts, add-on program fees, the Goshen refund policy, and camperships, please visit our Registration Page.</p>
+                {% include feesTable.html %}
                 <p class="text-center"><a class="marowak-button"  href="/registration.html">Learn More</a></p>
             </div>
         </div>

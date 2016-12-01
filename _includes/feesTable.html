@@ -1,0 +1,23 @@
+<table class="gsrTable-dark">
+    <thead>
+        <tr>
+            <th></th>
+            <td>Price per Camper</td>
+            <td>If paid by...</td>
+        </tr>
+    </thead>
+    <tbody>
+{% assign refRate = site.data.fees.rates[1] %}
+{% for rate in site.data.fees.rates %}
+{% assign diff = rate.youth | minus: refRate.youth %}
+        <tr>
+            <th>{{rate.label}}{% if diff > 0 %} (${{diff}} more){% elsif diff < 0 %} (${{0 | minus: diff}} off){% endif %}</th>
+            <td>Youth: ${{rate.youth}}<br/>Adult: ${{rate.adult}}*</td>
+            <td>{{rate.deadline}}</td>
+        </tr>
+{% endfor %}
+    </tbody>
+</table>
+<p>*All units will receive <b>two free adult leaders</b> per unit!</p>
+<p><b>Early Bird Special!</b> All who pay in full by the Early Bird Deadline will be eligible for the 2016 Goshen hat!</p>
+<p>For more information about registration, including quick facts, add-on program fees, the Goshen refund policy, and camperships, please visit our Registration Page.</p>
